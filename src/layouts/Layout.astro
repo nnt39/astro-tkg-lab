@@ -28,6 +28,9 @@ const { title, description, ogpImage } = Astro.props;
     <meta property="og:image" content={ogpImage? ogpImage: ""} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="&5" />
+
+	{/* css */}
+	<link href="/dist/tailwind.css" rel="stylesheet">
   </head>
   <body>
     <slot />
