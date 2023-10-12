@@ -1,0 +1,26 @@
+---
+import Layout from "@/layouts/Layout.astro";
+---
+
+<Layout title="Welcome to Astro." description="">
+  <main class="bg-gradient pt-32">
+    <h1 class="text-2xl">Welcome to <span class="text-red-700">Astro</span></h1>
+    <a href="/portfolio/live" class="bg-red-200">ライブページ</a>
+    <a href="/portfolio/about" class="bg-red-200">プロフィールページ</a>
+    <section class="h-[500px]">
+      <h2>こんな想いありませんか</h2>
+    </section>
+    <section class="h-[500px]">
+      <h2>プロフィール</h2>
+    </section>
+    <section class="h-[500px]">
+      <h2>次の参戦予定</h2>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .bg-gradient {
+    background: linear-gradient(180deg, #FBB03B 0.01%, #FFE978 26.6%);
+  }
+</style>

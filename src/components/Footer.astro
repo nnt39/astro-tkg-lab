@@ -1,0 +1,14 @@
+---
+interface Props {
+  breadcrumbs?: string;
+}
+
+const { breadcrumbs } = Astro.props;
+
+import Breadcrumb from "@/components/Breadcrumb.astro";
+---
+
+<footer>
+  <Breadcrumb breadcrumbs={breadcrumbs} />
+   フッターです
+</footer>
