@@ -36,12 +36,20 @@ import Footer from "@/components/Footer.astro";
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="&5" />
 
+    {/* フォント */}
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
     {/* css */}
     <link href="/dist/tailwind.css" rel="stylesheet" />
   </head>
   <body>
     <Header />
-    <slot />
+      <slot />
     <Footer breadcrumbs={breadcrumbs} />
   </body>
 </html>
