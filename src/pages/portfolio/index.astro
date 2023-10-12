@@ -1,5 +1,6 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+import Card from "@/components/Card.astro";
 ---
 
 <Layout title="Welcome to Astro." description="">
@@ -8,7 +9,11 @@ import Layout from "@/layouts/Layout.astro";
     <a href="/portfolio/live" class="bg-red-200">ライブページ</a>
     <a href="/portfolio/about" class="bg-red-200">プロフィールページ</a>
     <section class="h-[500px]">
-      <h2>こんな想いありませんか</h2>
+      <ul class="grid grid-cols-3 gap-6 mx-6">
+        <Card text="想いテキスト" src="/image/card/card-img01.png"/>
+        <Card text="想いテキスト" src="/image/card/card-img01.png"/>
+        <Card text="想いテキスト" src="/image/card/card-img01.png"/>
+      </ul>
     </section>
     <section class="h-[500px]">
       <h2>プロフィール</h2>
