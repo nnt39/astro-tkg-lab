@@ -3,9 +3,13 @@ interface Props {
   title: string;
   description?: string;
   ogpImage?: string;
+  breadcrumbs?: string;
 }
 
-const { title, description, ogpImage } = Astro.props;
+const { title, description, ogpImage, breadcrumbs } = Astro.props;
+
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
 ---
 
 <!doctype html>
@@ -24,18 +28,22 @@ const { title, description, ogpImage } = Astro.props;
     <meta property="og:url" content="" />
     <meta property="og:title" content={title} />
     <meta property="og:type" content="website" />
-    <meta property="og:description" content={description} />
-    <meta property="og:image" content={ogpImage? ogpImage: ""} />
+    <meta
+      property="og:description"
+      content={description ? "" : "TKGのサイトです"}
+    />
+    <meta property="og:image" content={ogpImage ? ogpImage : ""} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="&5" />
 
-	{/* css */}
-	<link href="/dist/tailwind.css" rel="stylesheet">
+    {/* css */}
+    <link href="/dist/tailwind.css" rel="stylesheet" />
   </head>
   <body>
+    <Header />
     <slot />
+    <Footer breadcrumbs={breadcrumbs} />
   </body>
 </html>
 
-<style is:global>
-</style>
+<style is:global></style>

@@ -1,0 +1,12 @@
+---
+interface Props {
+  breadcrumbs?: string;
+}
+
+const { breadcrumbs } = Astro.props;
+---
+
+<ul class="flex gap-2">
+  <li>HOME</li>
+  <li>&gt; {breadcrumbs}</li>
+</ul>
