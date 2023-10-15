@@ -10,10 +10,26 @@ import Card from "@/components/Card.astro";
     <a href="/portfolio/about" class="bg-red-200">プロフィールページ</a>
     <section class="h-[500px]">
       <ul class="grid grid-cols-1 md:grid-cols-3 gap-6 mx-6">
-        <Card text="想いテキスト" src="/image/card/card-img01.png"/>
-        <Card text="想いテキスト" src="/image/card/card-img01.png"/>
-        <Card text="想いテキスト" src="/image/card/card-img01.png"/>
+        <Card
+          text="あまりお金をかけずに、ホームページは欲しい！"
+          src="/image/card/card-img01.png"
+        />
+        <Card
+          text="地元（秋田）の人につくるのは任せたい！"
+          src="/image/card/card-img02.png"
+        />
+        <Card
+          text="TKGのように、ホームページにもアレンジが欲しい！"
+          src="/image/card/card-img03.png"
+        />
       </ul>
+      <a href="/portfolio/contact">
+        <div class="bg-accent text-white inline-block rounded-full px-4 py-2">
+          <span class="text-sm block">どんなことでもお気軽に</span>
+          <strong class="text-2xl">無料相談はこちら</strong>
+        </div>
+      </a>
+      <p><small class="text-xxs">※現在、受付を停止しています。</small></p>
     </section>
     <section class="h-[500px]">
       <h2>プロフィール</h2>
@@ -26,6 +42,6 @@ import Card from "@/components/Card.astro";
 
 <style>
   .bg-gradient {
-    background: linear-gradient(180deg, #FBB03B 0.01%, #FFE978 26.6%);
+    background: linear-gradient(180deg, #fbb03b 0.01%, #ffe978 26.6%);
   }
 </style>
