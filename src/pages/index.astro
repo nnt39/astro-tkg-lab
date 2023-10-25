@@ -5,6 +5,11 @@ import Layout from "@/layouts/Layout.astro";
 <Layout title="Welcome to Astro." description="">
   <main class="mt-40">
     <h1 class="text-2xl uppercase font-zenMaru font-bold">TKG tree</span></h1>
-    <a href="/portfolio" class="bg-red-200">portfolio</a>
+    <div class="flex flex-col gap-8 w-fit my-8">
+      <a href="/portfolio" class="bg-primary">ポートフォリオトップ</a>
+      <a href="/portfolio/live" class="bg-primary">ポートフォリオ - ライブ</a>
+      <a href="/portfolio/about" class="bg-primary">ポートフォリオ - プロフィール</a>
+      <a href="/blog" class="bg-primary">ブログ一覧</a>
+    </div>
   </main>
 </Layout>

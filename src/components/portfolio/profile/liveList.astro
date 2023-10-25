@@ -1,6 +1,6 @@
 ---
 import { getLives } from "@/lib/microcms.ts";
-const response = await getLives({ fields: ["id", "title"] });
+const response = await getLives({ fields: ["id", "title", "artist", "venue"] });
 ---
 
 {
@@ -9,6 +9,7 @@ const response = await getLives({ fields: ["id", "title"] });
       <>
         <p>{content.title}</p>
         <p>{content.artist}</p>
+        <p>{content.venue}</p>
       </>
     </div>
   ))
