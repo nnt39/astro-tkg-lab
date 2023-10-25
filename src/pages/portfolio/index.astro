@@ -1,41 +1,22 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import Card from "@/components/Card.astro";
+import MV from "@/components/portfolio/index/MV.astro";
+import Card from "@/components/portfolio/index/Card.astro";
 ---
 
-<Layout title="Welcome to Astro." description="">
-  <main class="bg-gradient pt-32">
-    <h1 class="text-2xl">Welcome to <span class="text-red-700">Astro</span></h1>
+<Layout title="ホームページ制作のTKG" description="">
+  <main class="bg-gradient pt-32 font-zenMaru">
     <a href="/portfolio/live" class="bg-red-200">ライブページ</a>
     <a href="/portfolio/about" class="bg-red-200">プロフィールページ</a>
-    <section class="h-[500px]">
-      <ul class="grid grid-cols-1 md:grid-cols-3 gap-6 mx-6">
-        <Card
-          text="あまりお金をかけずに、ホームページは欲しい！"
-          src="/image/card/card-img01.png"
-        />
-        <Card
-          text="地元（秋田）の人につくるのは任せたい！"
-          src="/image/card/card-img02.png"
-        />
-        <Card
-          text="TKGのように、ホームページにもアレンジが欲しい！"
-          src="/image/card/card-img03.png"
-        />
-      </ul>
-      <a href="/portfolio/contact">
-        <div class="bg-accent text-white inline-block rounded-full px-4 py-2">
-          <span class="text-sm block">どんなことでもお気軽に</span>
-          <strong class="text-2xl">無料相談はこちら</strong>
-        </div>
-      </a>
-      <p><small class="text-xxs">※現在、受付を停止しています。</small></p>
+    <MV />
+    <Card />
+    <section>
+      <h2>
+        <span>Create</span>
+      </h2>
     </section>
-    <section class="h-[500px]">
+    <section class="h-[500px] mt-32">
       <h2>プロフィール</h2>
-    </section>
-    <section class="h-[500px]">
-      <h2>次の参戦予定</h2>
     </section>
   </main>
 </Layout>
