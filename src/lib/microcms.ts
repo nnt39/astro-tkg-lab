@@ -48,7 +48,8 @@ export type Live = {
   publishedAt: string;
   revisedAt: string;
   title: string;
-  content: string;
+  artist: string;
+  venue: string;
 };
 export type LiveResponse = {
   totalCount: number;
