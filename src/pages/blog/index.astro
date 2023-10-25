@@ -1,18 +1,17 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import LiveList from "@/components/portfolio/profile/liveList.astro"
+import BlogIndex from "@/components/portfolio/blog/BlogIndex.astro";
 ---
 
 <Layout
-  title="LIVE"
+  title="ホームページ制作のTKG"
   description=""
   breadcrumbs={[
     { text: "テス", src: "テス" },
     { text: "テス", src: "テス" },
   ]}
 >
-  <main>
-    <h1 class="text-2xl">LIVE</h1>
-    <LiveList/>
+  <main class="bg-gradient pt-32 font-zenMaru">
+    <BlogIndex />
   </main>
 </Layout>

@@ -1,0 +1,15 @@
+---
+import { getLives } from "@/lib/microcms.ts";
+const response = await getLives({ fields: ["id", "title"] });
+---
+
+{
+  response.contents.map((content: any) => (
+    <div>
+      <>
+        <p>{content.title}</p>
+        <p>{content.artist}</p>
+      </>
+    </div>
+  ))
+}
