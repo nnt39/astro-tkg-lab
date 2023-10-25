@@ -2,22 +2,31 @@
 import Layout from "@/layouts/Layout.astro";
 import MV from "@/components/portfolio/index/MV.astro";
 import Card from "@/components/portfolio/index/Card.astro";
+import Create from "@/components/portfolio/index/Create.astro";
+import Profile from "@/components/portfolio/index/Profile.astro";
+import Gallery from "@/components/portfolio/index/Gallery.astro";
+import Blog from "@/components/portfolio/index/Blog.astro";
+import Contact from "@/components/portfolio/index/Contact.astro";
 ---
 
-<Layout title="ホームページ制作のTKG" description="">
+<Layout
+  title="ホームページ制作のTKG"
+  description=""
+  breadcrumbs={[
+    { text: "テス", src: "テス" },
+    { text: "テス", src: "テス" },
+  ]}
+>
   <main class="bg-gradient pt-32 font-zenMaru">
     <a href="/portfolio/live" class="bg-red-200">ライブページ</a>
     <a href="/portfolio/about" class="bg-red-200">プロフィールページ</a>
     <MV />
     <Card />
-    <section>
-      <h2>
-        <span>Create</span>
-      </h2>
-    </section>
-    <section class="h-[500px] mt-32">
-      <h2>プロフィール</h2>
-    </section>
+    <Create />
+    <Profile />
+    <Gallery />
+    <Blog />
+    <Contact />
   </main>
 </Layout>
 

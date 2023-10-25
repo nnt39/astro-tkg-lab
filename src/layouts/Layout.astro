@@ -1,9 +1,14 @@
 ---
+
+interface Breadcrumb {
+  src: string;
+  text: string;
+}
 interface Props {
   title: string;
   description?: string;
   ogpImage?: string;
-  breadcrumbs?: string;
+  breadcrumbs?: Breadcrumb[] | undefined;
 }
 
 const { title, description, ogpImage, breadcrumbs } = Astro.props;

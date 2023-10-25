@@ -1,12 +1,23 @@
 ---
-interface Props {
-  breadcrumbs?: string;
+interface Breadcrumb {
+  src: string;
+  text: string;
 }
 
+interface Props {
+  breadcrumbs?: Breadcrumb[] | undefined;
+}
 const { breadcrumbs } = Astro.props;
 ---
 
 <ul class="flex gap-2">
   <li><a href="/" class="bg-red-200">HOME</a></li>
-  <li>&gt; {breadcrumbs}</li>
+  {
+    breadcrumbs &&
+      breadcrumbs.map((breadcrumb) => (
+        <li>
+          &gt; <a href={breadcrumb.src}>{breadcrumb.text}</a>
+        </li>
+      ))
+  }
 </ul>

@@ -1,0 +1,15 @@
+---
+// interface Props {
+//   Tag?: string;
+//   titleJa: string;
+//   titleEn?: string;
+// }
+
+const { Tag = "h2", titleJa = "", titleEn = "" } = Astro.props;
+---
+
+  <span
+    class="text-xs pb-1 text-primary relative after:absolute after:w-full after:h-[2px] after:bg-primary after:bottom-0 after:left-0"
+    >{titleEn}</span
+  >
+  <Tag class="text-3xl font-medium mt-1" set:html={titleJa}/>

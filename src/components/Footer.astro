@@ -1,6 +1,10 @@
 ---
+interface Breadcrumb {
+  src: string;
+  text: string;
+}
 interface Props {
-  breadcrumbs?: string;
+  breadcrumbs?: Breadcrumb[] | undefined;
 }
 
 const { breadcrumbs } = Astro.props;
