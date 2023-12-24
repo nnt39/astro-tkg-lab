@@ -1,0 +1,23 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import LiveList from "@/components/portfolio/profile/liveList.astro"
+---
+
+<Layout
+  title="LIVE"
+  description=""
+  breadcrumbs={[
+    { text: "ポートフォリオ", src: "/portfolio" },
+    { text: "プロフィール", src: "/portfolio/profile" },
+    { text: "参戦履歴・参戦予定", src: "/portfolio/profile/live" },
+  ]}
+>
+  <main>
+    <section class="px-6 lg:px-[108px]">
+      <div class="max-w-2lg mx-auto pt-28 lg:pt-32">
+        <h1 class="text-2xl flex gap-3 items-center"><span>LIVE</span><span class="aspect-square bg-primary w-2 inline-block rounded-full"></span><span>参戦履歴・予定</span></h1>
+        <LiveList/>
+      </div>
+    </section>
+  </main>
+</Layout>

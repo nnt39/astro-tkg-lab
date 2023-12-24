@@ -1,15 +1,23 @@
 ---
 import { getLives } from "@/lib/microcms.ts";
-const response = await getLives({ fields: ["id", "title", "artist", "venue"] });
+const response = await getLives({
+  fields: ["id", "date", "title", "artist", "venue"],
+}); // APIを追加する場合は追加
+import { cdate } from "cdate";
 ---
 
+{/* 日付フォーマット：https://www.npmjs.com/package/cdate?activeTab=readme */}
 {
   response.contents.map((content: any) => (
-    <div>
+    <div class="mt-4 lg:my-6">
       <>
-        <p>{content.title}</p>
-        <p>{content.artist}</p>
-        <p>{content.venue}</p>
+        <p class="text-xs/[1.6] lg:text-sm/[1.6]">
+          <time class="text-primary font-en font-light" datetime={cdate(content.date).format("YYYY-MM-DD")}>{cdate(content.date).format("YYYY-MM-DD")}</time><span class="ml-2 text-gray-900 lg:ml-4">{content.venue}</span>
+        </p>
+        <h2 class="text-gray-900 text-base/[1.6] lg:text-lg/[1.6]">{content.title}</h2>
+        <p class="text-gray-500 text-xs/[1.6] lg:text-sm/[1.6]">
+          {content.artist}
+        </p>
       </>
     </div>
   ))
