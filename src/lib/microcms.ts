@@ -25,7 +25,10 @@ export type BlogResponse = {
 
 //APIの呼び出し
 export const getBlogs = async (queries?: MicroCMSQueries) => {
-  return await client.get<BlogResponse>({ endpoint: "blogs", queries });
+  return await client.get<BlogResponse>({
+    endpoint: "blogs",
+    queries: { limit: 40 },
+  });
 };
 export const getBlogDetail = async (
   contentId: string,
@@ -38,8 +41,6 @@ export const getBlogDetail = async (
   });
 };
 
-
-
 //Live
 export type Live = {
   id: string;
@@ -50,6 +51,7 @@ export type Live = {
   title: string;
   artist: string;
   venue: string;
+  date: string;
 };
 export type LiveResponse = {
   totalCount: number;
@@ -59,8 +61,10 @@ export type LiveResponse = {
 };
 
 //APIの呼び出し
+// APIの呼び出し
 export const getLives = async (queries?: MicroCMSQueries) => {
-  return await client.get<LiveResponse>({ endpoint: "live", queries });
+  const defaultQueries = { ...queries, limit: 100 }; // Set the default limit to 100
+  return await client.get<LiveResponse>({ endpoint: "live", queries: defaultQueries });
 };
 export const getLiveDetail = async (
   contentId: string,
