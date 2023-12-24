@@ -7,18 +7,23 @@ module.exports = {
       accent: "#F7004C",
       brown: "#4D3A3B",
       white: "#fff",
-    //   blue: "#1fb6ff",
-    //   purple: "#7e5bef",
-    //   pink: "#ff49db",
-    //   orange: "#ff7849",
-    //   green: "#13ce66",
-    //   yellow: "#ffc82c",
-    //   "gray-dark": "#273444",
-    //   gray: "#8492a6",
-    //   "gray-light": "#d3dce6",
+      gray: {
+        50: "#f9fafb",
+        100: "#f0f2f4",
+        200:"#e1e5ea",
+        300:"#cad0d8",
+        400:"#95a1b2",
+        500:"#637288",
+        600:"#475262",
+        700:"#333c47",
+        800:"#1e2329",
+        900:"#0f1115",
+        950:"#090a0c",
+      },
     },
     fontFamily: {
-      zenMaru: ['Zen Maru Gothic', "sans-serif"], // 400, 500, 700
+      ja: ["Zen Maru Gothic", "sans-serif"], // 400, 500, 700
+      en: ["Work Sans", "sans-serif"] // 100, 200
     },
     // extend: {
     //   spacing: {
@@ -31,9 +36,12 @@ module.exports = {
     // },
     extend: {
       boxShadow: {
-        'sm': '2px 2px 4px 0 rgba(0, 0, 0, 0.1)',
+        sm: "2px 2px 4px 0 rgba(0, 0, 0, 0.1)",
+      },
+      maxWidth: {
+        "2lg": "1224px",
       }
-    }
+    },
   },
   plugins: [],
 };
