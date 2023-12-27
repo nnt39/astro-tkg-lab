@@ -1,12 +1,82 @@
 ---
+import HeadingLine from "@/components/portfolio/profile/HeadingLine.astro";
 import Layout from "@/layouts/Layout.astro";
 ---
 
-<Layout title="髙木のこと" description="" breadcrumbs={[{text:"About", src:"/portfolio/about"}]}>
+<Layout title="プロフィール" description="" breadcrumbs={[{text:"Profile", src:"/portfolio/profile"}]}>
   <main>
-    <div class="h-80">
+    <section class="px-6 lg:px-[108px]">
+        <div class="max-w-2lg mx-auto">
+        <h1 class="text-2xl">profile</span></h1>
 
-      <h1 class="text-2xl">profile</span></h1>
-    </div>
+        {/* プロフィール */}
+        <section class="flex flex-col gap-10 lg:flex-row lg:items-end lg:gap-16">
+          <div class="flex-1 relative">
+            <span class="absolute z-[1] top-4 left-4 w-full h-full block border-4 border-primary rounded-2xl"></span>
+            <span class="absolute z-0 top-4 left-4 w-full h-full block bg-[#FFFCEC] rounded-2xl"></span>
+            <div class="relative w-full h-96 overflow-hidden rounded-2xl flex items-center">
+              <img class="object-cover min-h-full min-w-full" src="/image/portfolio/profile/profile-image.jpg" alt="たかぎの写真">
+            </div>
+          </div>
+          <div class="">
+            <h2 class="text-lg/[1.6]">たかぎ なみ</h2>
+            <HeadingLine/>
+            <p class="text-sm/[2]">秋田県花火の街出身。季節の花火が綺麗な街です。<br>
+            農業高校を卒業して、8年間銀行に勤務し、主に渉外担当として従事。<br>
+            現在はフロントエンドエンジニアとして働いています。<br>
+            趣味はライブに行くこと。主にヴィジュアル系。<br>V系好きは、14年目です。<br>
+            好きな言葉は「自分らしく自分裏切れ」。
+          </p>
+          </div>
+        </section>
+
+        <div class="flex flex-col items-center gap-2 my-20">
+          <span class="h-3 bg-primary w-3 block rounded-full"></span>
+          <span class="h-2 bg-primary w-2 block rounded-full"></span>
+          <span class="h-1 bg-primary w-1 block rounded-full"></span>
+        </div>
+
+        {/* メッセージ */}
+        <section class="lg:mx-auto lg:w-fit relative border-4 border-primary rounded-2xl bg-[#FFFCEC] p-6 lg:p-10">
+          <h2 class="text-lg/[1.6]">「ありがとう」が一番嬉しい言葉</h2>
+          <HeadingLine/>
+          <div>
+            <p class="text-sm/[2]">小さい頃から何かを作ったりするのが好きでした。<br>地方銀行員として、沢山のお客さまの悩みに寄り添い培った、<br>「ニーズに合わせた課題解決力」は、必ずお客さまのお役に立てることができると思います。</p>
+            <p class="text-sm/[2]">「誰かの役に立つ」ことが大好きなので、ぜひお気軽にご相談いただければ嬉しいです。<br>ホームページ運営からマネープランまで、お客さまの悩みを一緒に解決いたします。</p>
+          </div>
+          <img
+            class="w-12 md:w-20 translate-y-[1px] absolute bottom-0 right-0"
+            src="/image/common/tkg-icon.svg"
+            alt=""
+            width="30"
+            height="30"
+          />
+        </section>
+
+        <div class="flex flex-col items-center gap-2 my-20">
+          <span class="h-3 bg-primary w-3 block rounded-full"></span>
+          <span class="h-2 bg-primary w-2 block rounded-full"></span>
+          <span class="h-1 bg-primary w-1 block rounded-full"></span>
+        </div>
+
+        {/* おすすめのTKGアレンジ */}
+        <section class="">
+          <h2 class="text-lg/[1.6] flex gap-1">
+            <span>おすすめのTKGアレンジ</span><img
+            class="w-4 translate-y-[1px]"
+            src="/image/common/tkg-icon.svg"
+            alt=""
+            width="30"
+            height="30"
+          />
+          <span>ジャバンのり × 醤油</span></h2>
+          <HeadingLine/>
+          <div>
+            <p class="text-sm/[2]">シンプルなTKGに広がる、海苔と胡麻油の風味が最高です！</p>
+          </div>
+        </section>
+
+      </div>
+      </section>
   </main>
 </Layout>
