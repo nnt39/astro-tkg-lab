@@ -3,21 +3,19 @@ const { dog } = Astro.params;
 import HeaderListItem from "@/components/header/HeaderLinkItem.astro";
 ---
 
-<header
-  class="mx-6 z-[70] shadow-sm py-2 px-3 rounded-full bg-white lg:py-4 lg:px-6 fixed left-0 right-0 top-6 flex justify-between 2xl:max-w-[1440px] 2xl:mx-auto"
->
-  <a href="/"
-    ><img
-      class="hover:scale-125 transition-transform duration-300"
-      src="/image/common/tkg-icon.svg"
-      alt="ホームページ制作のTKG"
-      width="30"
-      height="30"
-    /></a
+<header class="px-6 lg:px-[108px] fixed z-[70] top-6 w-full">
+  <div
+    class="shadow-sm py-2 px-3 rounded-full bg-white lg:py-4 lg:px-6 w-full flex justify-between max-w-2lg mx-auto"
   >
-  <ul class="font-zenMaru font-bold text-brown flex gap-4">
-    <HeaderListItem text="<span>T</span>kg?" href="/portfolio/about" />
-    <HeaderListItem text="ma<span>K</span>e!</a>" href="/portfolio/service" />
-    <HeaderListItem text="<span>G</span>allery!" href="/portfolio/gallery" />
-  </ul>
+    <a href="/"
+      ><img
+        class="hover:scale-125 transition-transform duration-300"
+        src="/image/common/tkg-icon.svg"
+        alt="ホームページ制作のTKG"
+        width="30"
+        height="30"
+      /></a
+    >
+    <HeaderListItem />
+  </div>
 </header>

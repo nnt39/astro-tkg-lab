@@ -1,6 +1,7 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import LiveList from "@/components/portfolio/profile/liveList.astro";
+import PageHeading from "@/components/portfolio/common/PageHeading.astro";
 ---
 
 <Layout
@@ -15,20 +16,7 @@ import LiveList from "@/components/portfolio/profile/liveList.astro";
   <main>
     <section class="px-6 lg:px-[108px]">
       <div class="max-w-2lg mx-auto pt-28 lg:pt-32">
-        <h1
-          class="relative text-2xl flex gap-3 items-end border-primary border w-fit py-2 px-5 -ml-5 rounded-full"
-        >
-        <span class="absolute -top-2 -right-2 -z-[1] bg-primary bg-opacity-20 w-full h-full rounded-full"></span>
-          <span>LIVE</span>
-          <img
-            class="w-4 -translate-y-1"
-            src="/image/common/tkg-icon.svg"
-            alt=""
-            width="30"
-            height="30"
-          />
-          <span>参戦履歴・予定</span>
-        </h1>
+        <PageHeading title="参戦履歴・予定" titleEn="Live" />
         <div class="mt-10 lg:my-18">
           <LiveList />
         </div>

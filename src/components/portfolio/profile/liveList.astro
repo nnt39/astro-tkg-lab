@@ -1,7 +1,7 @@
 ---
 import { getLives } from "@/lib/microcms.ts";
 const response = await getLives({
-  fields: ["id", "date", "title", "artist", "venue"],
+  fields: ["publishedAt", "id", "date", "title", "artist", "venue"],
 }); // APIを追加する場合は追加
 import { cdate } from "cdate";
 ---
@@ -14,9 +14,9 @@ import { cdate } from "cdate";
         <p class="text-xs/[1.6] lg:text-sm/[1.6]">
           <time
             class="text-primary font-en font-light"
-            datetime={cdate(content.date).format("YYYY-MM-DD")}
+            datetime={cdate(content.publishedAt).format("YYYY-MM-DD")}
           >
-            {cdate(content.date).format("YYYY-MM-DD")}
+            {cdate(content.publishedAt).tz("Asia/Tokyo").format("YYYY-MM-DD")}
           </time>
           <span class="ml-2 text-gray-900 lg:ml-4">{content.venue}</span>
         </p>

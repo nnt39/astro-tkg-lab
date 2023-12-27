@@ -1,15 +1,16 @@
 ---
-interface Props {
-  href: string;
-  text: string;
-}
-
-const { href, text } = Astro.props;
+const links = [
+  { href: '/portfolio/profile', text: '<span>T</span>kg?' },
+  { href: '/portfolio/service', text: 'ma<span>K</span>e!</a>' },
+  { href: '/portfolio/gallery', text: '<span>G</span>allery!' },
+];
 ---
-
-<li
-  class="group hover:bg-[#FFF3AA] hover:shadow-sm px-2 py-1 transition duration-500 rounded-full [&>a>span]:text-primary "
->
-  <a href={href} set:html={text}></a>
-</li>
-
+<ul class="font-bold text-brown flex gap-4">
+  {links.map((link) => (
+    <li
+      class="group hover:bg-[#FFF3AA] hover:shadow-sm px-2 py-1 transition duration-500 rounded-full [&>a>span]:text-primary"
+    >
+      <a href={link.href} set:html={link.text}></a>
+    </li>
+  ))}
+</ul>

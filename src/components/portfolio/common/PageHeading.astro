@@ -1,0 +1,23 @@
+---
+interface Props {
+  title: string;
+  titleEn?: string;
+}
+
+const { title = "", titleEn = "" } = Astro.props;
+---
+<div class="relative">
+    <span class="text-primary text-7xl opacity-20 font-en uppercase">{titleEn}</span>
+    <h1
+      class="text-2xl absolute bottom-0 left-0 flex gap-3"
+    >
+      <img
+        class="w-4 translate-y-[2px]"
+        src="/image/common/tkg-icon.svg"
+        alt=""
+        width="30"
+        height="30"
+      />
+      <span>{title}</span>
+    </h1>
+  </div>
