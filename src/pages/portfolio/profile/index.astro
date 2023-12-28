@@ -1,5 +1,7 @@
 ---
 import HeadingLine from "@/components/portfolio/profile/HeadingLine.astro";
+import LikeItem from "@/components/portfolio/profile/LikeItem.astro";
+import LikeImage from "@/components/portfolio/profile/LikeItem.astro";
 import Layout from "@/layouts/Layout.astro";
 ---
 
@@ -24,7 +26,7 @@ import Layout from "@/layouts/Layout.astro";
             <p class="text-sm/[2]">秋田県花火の街出身。季節の花火が綺麗な街です。<br>
             農業高校を卒業して、8年間銀行に勤務し、主に渉外担当として従事。<br>
             現在はフロントエンドエンジニアとして働いています。<br>
-            趣味はライブに行くこと。主にヴィジュアル系。<br>V系好きは、14年目です。<br>
+            趣味はライブに行くこと。主にヴィジュアル系。<br>ヴィジュアル系好きは、14年目です。<br>
             好きな言葉は「自分らしく自分裏切れ」。
           </p>
           </div>
@@ -37,8 +39,8 @@ import Layout from "@/layouts/Layout.astro";
         </div>
 
         {/* メッセージ */}
-        <section class="lg:mx-auto lg:w-fit relative border-4 border-primary rounded-2xl bg-[#FFFCEC] p-6 lg:p-10">
-          <h2 class="text-lg/[1.6]">「ありがとう」が一番嬉しい言葉</h2>
+        <section class="lg:mx-auto lg:w-fit relative border-4 border-primary rounded-2xl bg-[#FFFCEC] pt-6 px-6 pb-10 lg:p-10">
+          <h2 class="text-xl/[1.6]">「ありがとう」が一番嬉しい言葉</h2>
           <HeadingLine/>
           <div>
             <p class="text-sm/[2]">小さい頃から何かを作ったりするのが好きでした。<br>地方銀行員として、沢山のお客さまの悩みに寄り添い培った、<br>「ニーズに合わせた課題解決力」は、必ずお客さまのお役に立てることができると思います。</p>
@@ -60,6 +62,7 @@ import Layout from "@/layouts/Layout.astro";
         </div>
 
         {/* おすすめのTKGアレンジ */}
+        {/*
         <section class="">
           <h2 class="text-lg/[1.6] flex gap-1">
             <span>おすすめのTKGアレンジ</span><img
@@ -74,6 +77,42 @@ import Layout from "@/layouts/Layout.astro";
           <div>
             <p class="text-sm/[2]">シンプルなTKGに広がる、海苔と胡麻油の風味が最高です！</p>
           </div>
+        </section> */}
+
+        {/* 好きなこと */}
+        <section class="mx-auto max-w-[808px]">
+          <h2 class="text-xl/[1.6] flex gap-1">好きなこと</h2>
+          <HeadingLine/>
+          <ul class="pt-10 flex flex-col gap-14 lg:px-20">
+            <li class="">
+              <LikeItem 
+              title="ヴィジュアル系"
+              text="最近はソロでライブ参戦しています。<br>最近はユナイトというバンド中心に遠征。"
+              src="/image/portfolio/profile/profile-like-01.jpg"
+              textImage="/image/portfolio/profile/profile-text-01.svg"
+              flexDirectionReverse={false}
+              />
+            </li>
+            <li class="">
+              <LikeItem 
+              title="お酒" 
+              text="レモンサワーが好きです🍋<br>時々ワインも嗜みます🍷" 
+              src="/image/portfolio/profile/profile-like-01.jpg" 
+              textImage="/image/portfolio/profile/profile-text-02.svg"
+              rotate="rotate-6"
+              minImage={false}
+              />
+            </li>
+            <li class="">
+              <LikeItem 
+              title="ドラマ" 
+              text="ソロ活女子シリーズはイチオシです。<br>シリーズで1回はあるソロ飲み回が好きです🍺" 
+              src="/image/portfolio/profile/profile-like-01.jpg" 
+              textImage="/image/portfolio/profile/profile-text-03.svg"
+              flexDirectionReverse={false}
+              />
+            </li>
+          </ul>
         </section>
 
       </div>
