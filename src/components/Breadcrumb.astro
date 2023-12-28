@@ -8,15 +8,17 @@ interface Props {
   breadcrumbs?: Breadcrumb[] | undefined;
 }
 const { breadcrumbs } = Astro.props;
+import DotRight from "@/components/portfolio/profile/DotRight.astro";
 ---
 
-<ul class="flex gap-2 text-brown">
-  <li><a href="/" class="bg-red-200">HOME</a></li>
+<ul class="flex gap-3 text-white">
+  <li class=""><a href="/" class="">Home</a></li>
   {
     breadcrumbs &&
       breadcrumbs.map((breadcrumb) => (
-        <li>
-          &gt; <a href={breadcrumb.src}>{breadcrumb.text}</a>
+        <li class="flex gap-3">
+          <DotRight/>
+          <a href={breadcrumb.src}>{breadcrumb.text}</a>
         </li>
       ))
   }
