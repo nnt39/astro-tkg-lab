@@ -12,11 +12,11 @@ import DotRight from "@/components/portfolio/profile/DotRight.astro";
 ---
 
 <ul class="flex gap-3 text-white">
-  <li class=""><a href="/" class="">Home</a></li>
+  <li class="text-sm/[2]"><a href="/" class="">Home</a></li>
   {
     breadcrumbs &&
       breadcrumbs.map((breadcrumb) => (
-        <li class="flex gap-3">
+        <li class="flex gap-3 text-sm/[2]">
           <DotRight/>
           <a href={breadcrumb.src}>{breadcrumb.text}</a>
         </li>
