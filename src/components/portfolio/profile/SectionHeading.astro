@@ -1,0 +1,11 @@
+---
+import HeadingLine from "@/components/portfolio/profile/HeadingLine.astro";
+
+interface Props {
+    title: string;
+}
+
+const { title = "" } = Astro.props;
+---
+<h2 class="text-xl/[1.6] flex gap-1 lg:text-2xl/[1.6]">{title}</h2>
+<HeadingLine/>

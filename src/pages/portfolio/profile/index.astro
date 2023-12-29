@@ -2,17 +2,26 @@
 import DotDown from "@/components/portfolio/profile/DotDown.astro";
 import HeadingLine from "@/components/portfolio/profile/HeadingLine.astro";
 import LikeItem from "@/components/portfolio/profile/LikeItem.astro";
-import Layout from "@/layouts/Layout.astro";
+import SectionHeading from "@/components/portfolio/profile/SectionHeading.astro";
+import Layout from "@/layouts/portfolio.astro";
 ---
 
-<Layout title="プロフィール" description="" breadcrumbs={[{text:"ポートフォリオ", src:"/portfolio"},{text:"プロフィール", src:"/portfolio/profile"}]}>
+<Layout title="プロフィール" description="" breadcrumbs={[{text:"プロフィール", src:"/portfolio/profile"}]}>
   <main>
     <section class="px-6 lg:px-[108px]">
         <div class="max-w-2lg mx-auto py-28 lg:py-36">
-        <h1 class="text-2xl">profile</span></h1>
+          <div class="flex flex-col gap-1 w-fit">
+            <div class="flex items-center gap-3">
+              <span class="text-primary font-en text-sm/[1] lg:text-base/[1]">Profile</span>
+              <span class="block w-full h-[1px] bg-primary"></span>
+            </div>
+            <h1>
+              <span class="text-2xl/[1] lg:text-3xl/[1]">プロフィール</span>
+            </h1>
+          </div>
 
         {/* プロフィール */}
-        <section class="flex flex-col gap-10 lg:flex-row lg:items-end lg:gap-16">
+        <section class="flex flex-col gap-10 mt-10 lg:flex-row lg:items-end lg:gap-16">
           <div class="flex-1 relative">
             <span class="absolute z-[1] top-4 left-4 w-full h-full block border-4 border-primary rounded-2xl"></span>
             <span class="absolute z-0 top-4 left-4 w-full h-full block bg-[#FFFCEC] rounded-2xl"></span>
@@ -21,9 +30,9 @@ import Layout from "@/layouts/Layout.astro";
             </div>
           </div>
           <div class="">
-            <h2 class="text-lg/[1.6]">たかぎ なみ</h2>
-            <HeadingLine/>
+            <SectionHeading title="たかぎ なみ"/>
             <p class="text-sm/[2]">秋田県花火の街出身。季節の花火が綺麗な街です。<br>
+            1995年5月生まれの28歳です。<br>
             農業高校を卒業して、8年間銀行に勤務し、主に渉外担当として従事。<br>
             現在はフロントエンドエンジニアとして働いています。<br>
             趣味はライブに行くこと。主にヴィジュアル系。<br>ヴィジュアル系好きは、14年目です。<br>
@@ -36,11 +45,13 @@ import Layout from "@/layouts/Layout.astro";
 
         {/* メッセージ */}
         <section class="lg:mx-auto lg:w-fit relative border-4 border-primary rounded-2xl bg-[#FFFCEC] pt-6 px-6 pb-10 lg:p-10">
-          <h2 class="text-xl/[1.6]">「ありがとう」が一番嬉しい言葉</h2>
+          <h2 class="text-xl/[1.6]">「誰かの役に立ちたい」</h2>
           <HeadingLine/>
           <div>
-            <p class="text-sm/[2]">小さい頃から何かを作ったりするのが好きでした。<br>地方銀行員として、沢山のお客さまの悩みに寄り添い培った、<br>「ニーズに合わせた課題解決力」は、必ずお客さまのお役に立てることができると思います。</p>
-            <p class="text-sm/[2]">「誰かの役に立つ」ことが大好きなので、ぜひお気軽にご相談いただければ嬉しいです。<br>ホームページ運営からマネープランまで、お客さまの悩みを一緒に解決いたします。</p>
+            <p class="text-sm/[2]">小さい頃から何かを作ったりするのが好きでした。「誰かの役に立つ」ことが大好きです。<br>
+              地方銀行員として、沢山のお客さまの悩みに寄り添い培った、「ニーズに合わせた課題解決力」は、<br>
+              必ず今後の業務の役に立てることができると思います。<br>
+              また、少人数のチームでの制作経験も、今後の業務に活かすことができると思います。</p>
           </div>
           <img
             class="w-12 md:w-20 translate-y-[1px] absolute bottom-0 right-0"
@@ -73,8 +84,7 @@ import Layout from "@/layouts/Layout.astro";
 
         {/* 好きなこと */}
         <section class="mx-auto max-w-[808px]">
-          <h2 class="text-xl/[1.6] flex gap-1">好きなこと</h2>
-          <HeadingLine/>
+          <SectionHeading title="好きなこと"/>
           <ul class="pt-10 flex flex-col gap-14 lg:px-20">
             <li class="">
               <LikeItem 
@@ -87,10 +97,10 @@ import Layout from "@/layouts/Layout.astro";
             </li>
             <li class="">
               <LikeItem 
-              title="お酒" 
-              text="レモンサワーが好きです🍋<br>時々ワインも嗜みます🍷" 
-              src="/image/portfolio/profile/profile-like-02.jpg" 
-              textImage="/image/portfolio/profile/profile-text-02.svg"
+              title="ゲーム" 
+              text="FFシリーズが好きです。今の楽しみはFF7 REVERSE。ジャッジアイズ（キムタクが如く）も好きです。先日初めて龍が如く（外伝）も始めました。" 
+              src="/image/portfolio/profile/profile-like-04.jpg" 
+              textImage="/image/portfolio/profile/profile-text-04.svg"
               rotate="rotate-6"
               minImage={false}
               />
@@ -104,34 +114,48 @@ import Layout from "@/layouts/Layout.astro";
               flexDirectionReverse={false}
               />
             </li>
+            <li class="">
+              <LikeItem 
+              title="お酒" 
+              text="レモンサワーが好きです🍋<br>時々ワインも嗜みます🍷" 
+              src="/image/portfolio/profile/profile-like-02.jpg" 
+              textImage="/image/portfolio/profile/profile-text-02.svg"
+              rotate="rotate-6"
+              minImage={false}
+              />
+            </li>
           </ul>
         </section>
 
+        {/*
         <DotDown/>
+        */}
 
         {/* History */}
-        <section class="mx-auto max-w-[808px]">
-          <h2 class="text-xl/[1.6] flex gap-1">たかぎの歴史</h2>
-          <HeadingLine/>
-          <ol class="mt-5">
-            <li class="flex gap-8 items-center">
-              <span class="text-4xl text-primary">1995.05</span>
-              <span>秋田にある花火の町で誕生。あだ名はヘルメット。</span>
-            </li>
-            <li class="flex gap-8 items-center">
-              <span class="text-4xl text-primary">2016.04</span>
-              <span>高校を卒業後、地方銀行へ就職</span>
-            </li>
-            <li class="flex gap-8 items-center ml-auto">
-              <span class="text-4xl text-primary">2019.11</span>
-              <span>自分のやりたいことを探し始める。友達が店をはじめたことをきっかけに、Web制作に興味を持ち、独学を開始。</span>
-            </li>
-            <li class="flex gap-8 items-center ml-auto">
-              <span class="text-4xl text-primary">2022.04</span>
-              <span>秋田県のウェブ制作会社に入社</span>
-            </li>
-          </ol>
-        </section>
+        {/*
+          <section class="mx-auto max-w-[808px]">
+            <h2 class="text-xl/[1.6] flex gap-1">たかぎの歴史</h2>
+            <HeadingLine/>
+            <ol class="mt-5">
+              <li class="flex gap-8 items-center">
+                <span class="text-4xl text-primary">1995.05</span>
+                <span>秋田にある花火の町で誕生。あだ名はヘルメット。</span>
+              </li>
+              <li class="flex gap-8 items-center">
+                <span class="text-4xl text-primary">2016.04</span>
+                <span>高校を卒業後、地方銀行へ就職</span>
+              </li>
+              <li class="flex gap-8 items-center ml-auto">
+                <span class="text-4xl text-primary">2019.11</span>
+                <span>自分のやりたいことを探し始める。友達が店をはじめたことをきっかけに、Web制作に興味を持ち、独学を開始。</span>
+              </li>
+              <li class="flex gap-8 items-center ml-auto">
+                <span class="text-4xl text-primary">2022.04</span>
+                <span>秋田県のウェブ制作会社に入社</span>
+              </li>
+            </ol>
+          </section>
+         */}
 
       </div>
       </section>
