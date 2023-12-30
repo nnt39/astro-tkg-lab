@@ -21,10 +21,10 @@ import Layout from "@/layouts/portfolio.astro";
           </div>
 
         {/* プロフィール */}
-        <section class="flex flex-col gap-10 mt-10 lg:flex-row lg:items-end lg:gap-16">
+        <section class="flex flex-col gap-10 mt-10 lg:flex-row lg:items-end lg:gap-16 lg:mt-16">
           <div class="flex-1 relative">
             <span class="absolute z-[1] top-4 left-4 w-full h-full block border-4 border-primary rounded-2xl"></span>
-            <span class="absolute z-0 top-4 left-4 w-full h-full block bg-[#FFFCEC] rounded-2xl"></span>
+            <span class="absolute z-0 top-4 left-4 w-full h-full block bg-yellow-10 rounded-2xl"></span>
             <div class="relative w-full h-96 overflow-hidden rounded-2xl flex items-center">
               <img class="object-cover min-h-full min-w-full" src="/image/portfolio/profile/profile-image.jpg" alt="たかぎの写真">
             </div>
@@ -44,14 +44,13 @@ import Layout from "@/layouts/portfolio.astro";
         <DotDown/>
 
         {/* メッセージ */}
-        <section class="lg:mx-auto lg:w-fit relative border-4 border-primary rounded-2xl bg-[#FFFCEC] pt-6 px-6 pb-10 lg:p-10">
+        <section class="lg:mx-auto lg:w-fit relative border-4 border-primary rounded-2xl bg-yellow-10 pt-6 px-6 pb-10 lg:p-10">
           <h2 class="text-xl/[1.6]">「誰かの役に立ちたい」</h2>
           <HeadingLine/>
           <div>
             <p class="text-sm/[2]">小さい頃から何かを作ったりするのが好きでした。「誰かの役に立つ」ことが大好きです。<br>
-              地方銀行員として、沢山のお客さまの悩みに寄り添い培った、「ニーズに合わせた課題解決力」は、<br>
-              必ず今後の業務の役に立てることができると思います。<br>
-              また、少人数のチームでの制作経験も、今後の業務に活かすことができると思います。</p>
+              地方銀行員として、沢山のお客さまの悩みに寄り添い培った、「ニーズに合わせた課題解決力」や、<br>
+              少人数のチームでの制作経験も、今後の業務に活かすことができると思います。</p>
           </div>
           <img
             class="w-12 md:w-20 translate-y-[1px] absolute bottom-0 right-0"
@@ -89,7 +88,7 @@ import Layout from "@/layouts/portfolio.astro";
             <li class="">
               <LikeItem 
               title="ヴィジュアル系"
-              text="主にソロでライブ参戦しています。最近はユナイトというバンド中心に遠征。<br>ライブ前の1杯も最高です…!!"
+              text="主にソロでライブ参戦しています。<br>最近はユナイトというバンド中心に遠征。<br>ライブ前の1杯も最高です…!!"
               src="/image/portfolio/profile/profile-like-01.jpg"
               textImage="/image/portfolio/profile/profile-text-01.svg"
               flexDirectionReverse={false}

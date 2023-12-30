@@ -23,7 +23,7 @@ const CardDate = [
 
 <ul class="grid grid-cols-1 sm:grid-cols-3 gap-6 mx-6">
   {CardDate.map(card => (
-    <li class="bg-[#FFFCEC] shadow-sm rounded-2xl px-6 pt-2 pb-6">
+    <li class="bg-yellow-10 shadow-sm rounded-2xl px-6 pt-2 pb-6">
       <img class="mx-auto" src={card.src} width="130" height="130" alt="" />
       <p set:html={card.text}></p>
     </li>

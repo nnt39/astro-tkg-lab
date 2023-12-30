@@ -12,12 +12,14 @@ const { breadcrumbs } = Astro.props;
 import Breadcrumb from "@/components/Breadcrumb.astro";
 ---
 
-<footer class="bg-[#F29544] px-6 pt-10 pb-20 lg:py-20 lg:px-[108px]">
-  <div class="max-w-2lg mx-auto grid grid-cols-1 items-start gap-y-8 lg:grid-cols-12">
-    <div class="col-span-1 lg:col-span-6">
-      <Breadcrumb breadcrumbs={breadcrumbs} />
-    </div>
-    <div class="lg:row-start-2 lg:col-start-1 lg:col-span-3">
+<div class="bg-yellow-200 px-6 py-1 lg:px-[108px]">
+  <div class="max-w-2lg mx-auto">
+    <Breadcrumb breadcrumbs={breadcrumbs} />
+  </div>
+</div>
+<footer class="bg-[#F29544] px-6 pt-10 pb-20 lg:pb-20 lg:px-[108px]">
+  <div class="max-w-2lg mx-auto grid grid-cols-1 xl:items-center gap-y-8 lg:grid-cols-12">
+    <div class="lg:col-start-1 lg:col-span-3">
       <a href="/portfolio" class="group flex gap-2">
         <img class="group-hover:scale-125 transition-transform duration-300"
           src="/image/common/tkg-icon.svg"
@@ -28,7 +30,7 @@ import Breadcrumb from "@/components/Breadcrumb.astro";
         <span class="text-lg/[2] text-white transition-color duration-300 group-hover:text-brown">TKG Portfolio</span>
       </a>
     </div>
-    <ul class="flex flex-col gap-2 items-end justify-between text-right lg:row-start-2 lg:col-start-7 lg:col-span-6 xl:flex-row">
+    <ul class="flex flex-col gap-2 justify-between items-end text-right lg:col-start-7 lg:col-span-6 xl:flex-row">
       <li class="relative w-fit px-[2px]">
         <a href="/portfolio/profile">
           <span class="text-white transition-color duration-300 hover:text-brown relative z-[1]">Tkg? - プロフィール</span>

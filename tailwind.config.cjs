@@ -7,6 +7,15 @@ module.exports = {
       accent: "#F7004C",
       brown: "#4D3A3B",
       white: "#fff",
+      yellow: {
+        10: "#FFFCEC",
+        200: "#FFF3AA",
+        500: "FFE978",
+      },
+      orange: {
+        600: "#FBB03B",
+        800: "#F29544",
+      },
       gray: {
         50: "#f9fafb",
         100: "#f0f2f4",
