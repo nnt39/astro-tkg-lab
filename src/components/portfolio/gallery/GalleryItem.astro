@@ -18,11 +18,19 @@ const Date = [
     tag: ["飲食店", "情報設計", "デザイン", "コーディング", "保守運用"]
   },
   {
-    title: "本サイト（TKG Portfolio）",
+    title: "スラクリ！ - SLashクリエイター学園 -",
     src: "/image/portfolio/gallery/gallery-03.jpg",
-    href:"/portfolio",
+    href:"https://slash-school.com/1st-creative-members/members/",
     target: true,
-    text: "たかぎの「TKG」、卵かけご飯（TKG）から着想を得て、デザインを考えました。当時参加していたコミュニティの講師やメンバーからレビューを頂きながらブラッシュアップ。その後も改善を重ねていますが、思いの詰まったサイトです。メインのキャラクターは、「こっけ」です。",
+    text: "フリーランス育成スクールSLashにて、個性豊かなメンバー紹介を目的としたサイトです。ディレクション・デザイナー・コーダーに分かれ、3名で制作。私はデザイナーを担当。キャラクター制作から、サイトデザインまで担当しました。キャラクター制作には、VRoidを使用し、個性豊かなメンバーを表現しています。サイトデザインは、シミュレーションゲームをイメージ。ボタンUIなどのコーディングも担当しています。",
+    tag: ["課題", "チーム制作", "デザイン", "コーディング"]
+  },
+  {
+    title: "本サイト（TKG Portfolio）",
+    src: "/image/portfolio/gallery/gallery-04.jpg",
+    href:"/portfolio",
+    target: false,
+    text: "たかぎの「TKG」、卵かけご飯（TKG）から着想を得て、デザインを考えました。当サイトはAstro、microCMS、Tailwind CSSで制作しています。当時参加していたコミュニティの講師やメンバーからレビューを頂きながらブラッシュアップ。その後も改善を重ねていますが、思いの詰まったサイトです。メインのキャラクターは、「こっけ」です。",
     tag: ["ポートフォリオ", "情報設計", "デザイン", "コーディング", "保守運用"]
   },
 ];
@@ -40,18 +48,20 @@ const Date = [
           </a>
         </div>
       </div>
+      <div class="h-full flex flex-col justify-between">
       <div class="mt-2 lg:mt-4">
         <h2>{date.title}</h2>
         <HeadingLine/>
         <p class="text-xs/[2] text-justify" set:html={date.text}/>
       </div>
-      <div class="flex flex-wrap gap-x-1 gap-y-2 mt-1">
+      <div class="flex flex-wrap gap-x-1 gap-y-2 mt-2">
         {date.tag.map(tag => (
-          <span class=" bg-yellow-200 text-brown text-xs mr-2 px-2.5 py-0.5 rounded">
+          <span class="bg-yellow-200 text-brown text-xs mr-2 px-2 py-[2px] rounded">
             #{tag}
           </span>
         ))}
       </div>
+    </div>
     </div>
   ))}
 </div>
