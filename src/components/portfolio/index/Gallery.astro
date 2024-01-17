@@ -2,10 +2,17 @@
 import Heading from "@/components/portfolio/common/Heading.astro";
 ---
 
-<section class="pt-[120px]">
-  <div class="px-6">
-    <div class="w-fit">
-      <Heading titleJa="つくったもの" titleEn="Gallery" />
+<section class="px-6 lg:px-[180px]">
+  <div class="max-w-[808px] mx-auto pt-12">
+    <Heading titleJa="つくったもの" titleEn="Gallery" />
+    <div class="relative max-w-[700px] pt-4 lg:pt-6">
+      <p class="text-base/[1.6] lg:text-lg/[2]">
+        過去の実績を公開しています。非公開実績は別途資料で用意しております。
+      </p>
     </div>
+    <a class="block w-fit mx-auto mt-4 lg:mt-6" href="/gallery">
+      <span class="inline-block border-[2px] border-brown rounded-full text-brown bg-yellow-200 text-base/[2] font-medium px-6 py-2 lg:text-lg/[2]">つくったものを見る</span>
+    </a>
+  </div>
   </div>
 </section>

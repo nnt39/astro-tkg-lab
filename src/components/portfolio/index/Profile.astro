@@ -2,10 +2,15 @@
 import Heading from "@/components/portfolio/common/Heading.astro";
 ---
 
-<section class="pt-[120px]">
-  <div class="px-6">
-    <div class="w-fit">
+<section class="px-6 lg:px-[108px]">
+  <div class="max-w-[808px] mx-auto">
       <Heading titleJa="プロフィール" titleEn="Profile" />
-    </div>
+          <p class="text-base/[1.6] mt-4 lg:mt-6 lg:text-lg/[2]">はじめまして。たかぎ なみと申します。<br>高校卒業後に地方銀行へ入社。窓口から渉外係まで担当。<br>
+            個人融資も少しかじりながら8年半勤め、退職。<br>退職後はウェブ制作会社へ入社し、フロントエンドエンジニアをしています。
+          </p>
+      </div>
+    <a class="block w-fit mx-auto mt-4 lg:mt-6" href="/profile">
+      <span class="inline-block border-[2px] border-brown rounded-full text-brown bg-yellow-200 text-base/[2] font-medium px-6 py-2 lg:text-lg/[2]">たかぎについて知る</span>
+    </a>
   </div>
 </section>
