@@ -1,0 +1,42 @@
+---
+// interface Props {
+//   text: string;
+//   src: string;
+// }
+// const { src } = Azstro.props;
+
+import MvKokke from "./MvKokke.astro";
+
+---
+
+<div class="">
+  <section class="px-6 overflow-clip lg:px-[108px]">
+    <div class="max-w-[808px] mx-auto ">
+      <MvKokke />
+      <h1 class="text-[12vw]/[1.1] font-medium mt-3 lg:text-[100px]/[1.0]">Nami Takagi<br>Portfolio.</h1>
+    </div>
+  </section>
+  <span class="block w-full bg-[url('/image/portfolio/mv/mv-icon03.svg')] bg-contain my-12 h-[80px]"></span>
+  <section class="h-[1000px]">
+    コンテンツが入ります
+  </section>
+</div>
+
+<style>
+  .animate-scroll {
+    animation: scroll 2s infinite;
+  }
+  @keyframes scroll {
+    0% {
+      opacity: 0;
+    }
+    70% {
+      opacity: 1;
+      transform: translateY(100%);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+  }
+</style>

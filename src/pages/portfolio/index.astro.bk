@@ -1,6 +1,6 @@
 ---
 import Layout from "@/layouts/portfolio.astro";
-import MV from "@/components/portfolio/index/PortfolioMv.astro";
+import MV from "@/components/portfolio/index/MV.astro";
 import Card from "@/components/portfolio/index/Card.astro";
 import Create from "@/components/portfolio/index/Create.astro";
 import Profile from "@/components/portfolio/index/Profile.astro";
@@ -13,17 +13,18 @@ import Contact from "@/components/portfolio/index/Contact.astro";
   title="ホームページ制作のTKG"
   description=""
   breadcrumbs={[
-    // { text: "テス", src: "テス" },
+    { text: "テス", src: "テス" },
+    { text: "テス", src: "テス" },
   ]}
 >
-  <main class="font-zenMaru pt-24 lg:pt-30">
+  <main class="bg-gradient pt-32 font-zenMaru">
     <MV />
-    <!-- <Card /> -->
-    <!-- <Create /> -->
-    <!-- <Profile /> -->
-    <!-- <Gallery /> -->
-    <!-- <Blog /> -->
-    <!-- <Contact /> -->
+    <Card />
+    <Create />
+    <Profile />
+    <Gallery />
+    <Blog />
+    <Contact />
   </main>
 </Layout>
 
