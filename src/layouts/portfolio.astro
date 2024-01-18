@@ -36,9 +36,11 @@ import Footer from "@/components/Footer.astro";
       property="og:description"
       content={description ? "" : "Nami Takagi | Portfolio"}
     />
-    <meta property="og:image" content={ogpImage ? ogpImage : ""} />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="&5" />
+    <meta property="og:image" content={ogpImage ? ogpImage : "https://astro-tkg-lab.vercel.app/image/common/portfolio-ogp.png"} />
+    <meta name="twitter:card" content="summary" />
+
+    {/* タッチアイコンの設定 */}
+    <link rel="apple-touch-icon" href="/image/common/touch-icon.png">
 
     {/* フォント */}
     <link rel="preconnect" href="https://fonts.googleapis.com" />
