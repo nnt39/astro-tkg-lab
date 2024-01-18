@@ -1,0 +1,13 @@
+---
+interface Props {
+  href: string;
+  src: string;
+}
+
+const { href, src } = Astro.props;
+---
+<a class="group" href={href} target="_blank">
+  <div class="box-egg border-[2px] rounded-2xl border-brown overflow-hidden aspect-video flex items-center">
+    <img class="w-full object-cover transition-transform duration-300 group-hover:scale-105" src={src} alt="">
+  </div>
+</a>

@@ -1,6 +1,6 @@
 ---
 import Layout from "@/layouts/portfolio.astro";
-import MV from "@/components/portfolio/index/PortfolioMv.astro";
+import PortfolioMv from "@/components/portfolio/index/PortfolioMv.astro";
 import Card from "@/components/portfolio/index/Card.astro";
 import Create from "@/components/portfolio/index/Create.astro";
 import Profile from "@/components/portfolio/index/Profile.astro";
@@ -14,8 +14,8 @@ import Contact from "@/components/portfolio/index/Contact.astro";
   description="たかぎ なみのポートフォリオです。プロフィール、実績などを公開しています。"
   breadcrumbs={[]}
 >
-  <main class="font-zenMaru py-24 lg:py-30">
-    <MV />
+  <main class="font-zenMaru pt-24 pb-36 lg:pt-30 lg:pb-48">
+    <PortfolioMv />
     <!-- <Create /> -->
     <Profile />
     <Gallery />

@@ -1,0 +1,21 @@
+---
+
+// interface Props {
+//   href: string;
+//   text: string;
+// }
+// const { href, text } = Astro.props;
+
+import TopGalleryItem from "./TopGalleryItem.astro";
+const galleryItems = [
+  { href: "https://nejimakiya3443.com/", src: "/image/portfolio/gallery/gallery-01.jpg" },
+  { href: "https://sakuragiya.com/", src: "/image/portfolio/gallery/gallery-02.jpg" },
+  { href: "https://slash-school.com/1st-creative-members/members/", src: "/image/portfolio/gallery/gallery-03.jpg" }
+];
+---
+
+<div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+  {galleryItems.map(item => (
+    <TopGalleryItem href={item.href} src={item.src}/>
+  ))}
+</div>
