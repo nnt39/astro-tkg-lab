@@ -1,5 +1,6 @@
 ---
 import Heading from "@/components/portfolio/common/Heading.astro";
+import ButtonBorder from "../common/ButtonBorder.astro";
 ---
 
 <section class="px-6 lg:px-[180px]">
@@ -10,9 +11,7 @@ import Heading from "@/components/portfolio/common/Heading.astro";
         過去の実績を公開しています。非公開実績は別途資料で用意しております。
       </p>
     </div>
-    <a class="block w-fit mx-auto mt-4 lg:mt-6" href="/portfolio/gallery">
-      <span class="inline-block border-[2px] border-brown rounded-full text-brown bg-yellow-200 text-base/[2] font-medium px-6 py-2 lg:text-lg/[2]">つくったものを見る</span>
-    </a>
+    <ButtonBorder href="/portfolio/gallery" text="つくったものを見る"/>
   </div>
   </div>
 </section>
