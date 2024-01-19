@@ -1,0 +1,29 @@
+---
+import ButtonBorder from "@/components/portfolio/common/ButtonBorder.astro";
+import Layout from "@/layouts/portfolio.astro";
+---
+
+<Layout
+  title="404 | Nami Takagi Portfolio"
+  description="たかぎ なみのポートフォリオです。プロフィール、実績などを公開しています。"
+  breadcrumbs={[]}
+>
+  <main class="px-6 h-screen min-h-[866px] lg:px-[108px]">
+    <div class="py-32">
+        <div class="max-w-[808px] flex flex-col gap-8 mx-auto lg:justify-between lg:flex-row lg:items-center">
+            <div class="flex flex-col items-center max-w-[60vw] mx-auto"> 
+                <div class="relative flex justify-center">
+                  <img class="absolute top-[45%] -translate-y-1/2 left-[48%] -translate-x-1/2 w-[22vw] max-w-[120px]" src="/image/portfolio/mv/mv-icon03.svg" alt="">
+                  <img class="" src="/image/portfolio/mv/mv-balloon.svg" alt="">
+                </div>
+                <img class="-mt-5" src="/image/portfolio/mv/mv-kokke03.svg" alt="">
+              </div>
+              <div class="flex flex-col items-center gap-6">
+                  <h1 class="font-en text-8xl lg:text-[120px]/[1.2]">404</h1>
+                  <p class="text-base/[1.6] lg:text-lg/[1.6]">ページが見つかりませんでした。</p>
+                <ButtonBorder text="ポートフォリオトップへ戻る" href="/portfolio"/>
+              </div>
+        </div>
+    </div>
+  </main>
+</Layout>
