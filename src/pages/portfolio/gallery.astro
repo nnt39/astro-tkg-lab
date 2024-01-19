@@ -2,30 +2,19 @@
 // import HeadingLine from "@/components/portfolio/profile/HeadingLine.astro";
 // import LikeItem from "@/components/portfolio/profile/LikeItem.astro";
 // import SectionHeading from "@/components/portfolio/profile/SectionHeading.astro";
-import Layout from "@/layouts/portfolio.astro";
+import LayoutsPortfolio from "@/layouts/LayoutsPortfolio.astro";
 import GallreyItem from "@/components/portfolio/gallery/GalleryItem.astro";
+import PageHeading from "@/components/portfolio/common/PageHeading.astro";
 ---
 
-<Layout title="つくったもの | Nami Takagi Portfolio" description="実績ページです。過去に制作したものについてまとめました。" breadcrumbs={[{text:"つくったもの", src:"/portfolio/gallery"}]}>
+<LayoutsPortfolio title="つくったもの | Nami Takagi Portfolio" description="実績ページです。過去に制作したものについてまとめました。" breadcrumbs={[{text:"つくったもの", src:"/portfolio/gallery"}]}>
   <main>
     <section class="px-6 lg:px-[108px]">
-        <div class="max-w-2lg mx-auto py-28 lg:py-36">
-          <div class="flex flex-col gap-1 w-fit">
-            <div class="flex items-center gap-4">
-              <span class="text-primary font-medium opacity-80 text-sm/[1] lg:text-base/[1]">Gallery</span>
-              <span class="block w-full h-[2px] bg-primary opacity-80"></span>
-            </div>
-            <h1>
-              <span class="text-2xl/[1] lg:text-3xl/[1]">つくったもの</span>
-            </h1>
-          </div>
-
+        <div class="max-w-2lg mx-auto py-28 lg:py-32">
+          <PageHeading title="制作物・実績" titleEn="Gallery"/>
           <p class="text-sm/[2] mt-8 mb-16">制作したものをご紹介いたします。<br>なお、非公開の実績もございます。非公開実績については、別途資料をご用意しております。</p>
-
-            <GallreyItem/>
-          
-
+          <GallreyItem/>
       </div>
       </section>
   </main>
-</Layout>
+</LayoutsPortfolio>

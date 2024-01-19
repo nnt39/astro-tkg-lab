@@ -1,24 +1,17 @@
 ---
+import PageHeading from "@/components/portfolio/common/PageHeading.astro";
 import DotDown from "@/components/portfolio/profile/DotDown.astro";
 import HeadingLine from "@/components/portfolio/profile/HeadingLine.astro";
 import LikeItem from "@/components/portfolio/profile/LikeItem.astro";
 import SectionHeading from "@/components/portfolio/profile/SectionHeading.astro";
-import Layout from "@/layouts/portfolio.astro";
+import LayoutsPortfolio from "@/layouts/LayoutsPortfolio.astro";
 ---
 
-<Layout title="プロフィール | Nami Takagi Portfolio" description="たかぎのプロフィールページです。制作への想いや好きなことなどについてまとめています。" breadcrumbs={[{text:"プロフィール", src:"/portfolio/profile"}]}>
+<LayoutsPortfolio title="プロフィール | Nami Takagi Portfolio" description="たかぎのプロフィールページです。制作への想いや好きなことなどについてまとめています。" breadcrumbs={[{text:"プロフィール", src:"/portfolio/profile"}]}>
   <main>
     <section class="px-6 lg:px-[108px]">
         <div class="max-w-2lg mx-auto py-28 lg:py-36">
-          <div class="flex flex-col gap-1 w-fit">
-            <div class="flex items-center gap-4">
-              <span class="text-primary font-medium text-sm/[1] opacity-80 lg:text-base/[1]">Profile</span>
-              <span class="block w-full h-[2px] opacity-80 bg-primary"></span>
-            </div>
-            <h1>
-              <span class="text-2xl/[1] lg:text-3xl/[1]">プロフィール</span>
-            </h1>
-          </div>
+          <PageHeading title="プロフィール" titleEn="Profile"/>
 
         {/* プロフィール */}
         <section class="flex flex-col gap-10 mt-10 lg:flex-row lg:items-end lg:gap-16 lg:mt-16">
@@ -130,33 +123,7 @@ import Layout from "@/layouts/portfolio.astro";
         <DotDown/>
         */}
 
-        {/* History */}
-        {/*
-          <section class="mx-auto max-w-[808px]">
-            <h2 class="text-xl/[1.6] flex gap-1">たかぎの歴史</h2>
-            <HeadingLine/>
-            <ol class="mt-5">
-              <li class="flex gap-8 items-center">
-                <span class="text-4xl text-primary">1995.05</span>
-                <span>秋田にある花火の町で誕生。あだ名はヘルメット。</span>
-              </li>
-              <li class="flex gap-8 items-center">
-                <span class="text-4xl text-primary">2016.04</span>
-                <span>高校を卒業後、地方銀行へ就職</span>
-              </li>
-              <li class="flex gap-8 items-center ml-auto">
-                <span class="text-4xl text-primary">2019.11</span>
-                <span>自分のやりたいことを探し始める。友達が店をはじめたことをきっかけに、Web制作に興味を持ち、独学を開始。</span>
-              </li>
-              <li class="flex gap-8 items-center ml-auto">
-                <span class="text-4xl text-primary">2022.04</span>
-                <span>秋田県のウェブ制作会社に入社</span>
-              </li>
-            </ol>
-          </section>
-         */}
-
       </div>
       </section>
   </main>
-</Layout>
+</LayoutsPortfolio>
