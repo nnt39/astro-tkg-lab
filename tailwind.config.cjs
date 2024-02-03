@@ -32,7 +32,7 @@ module.exports = {
     },
     fontFamily: {
       ja: ["Zen Maru Gothic", "sans-serif"], // 400, 500, 700
-      en: ["Zen Dots", "sans-serif"] // 400    
+      en: ["Comfortaa", "sans-serif"] // 500, 700
     },
     // extend: {
     //   spacing: {
