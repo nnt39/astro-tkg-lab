@@ -8,9 +8,8 @@ const links = [
 <ul class="font-bold text-brown flex gap-4">
   {links.map((link) => (
     <li
-      class="group hover:bg-[#FFF3AA] hover:shadow-sm px-2 py-1 transition duration-500 rounded-full [&>a>span]:text-primary"
     >
-      <a href={link.href} set:html={link.text}></a>
+      <a class="inline-block group font-en font-bold hover:bg-[#FFF3AA] hover:shadow-sm px-3 py-2 transition duration-500 rounded-full [&>span]:text-orange-800" href={link.href} set:html={link.text}></a>
     </li>
   ))}
 </ul>

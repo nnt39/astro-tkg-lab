@@ -10,9 +10,9 @@ const { Tag = "h2", titleJa = "", titleEn = "" } = Astro.props;
 
 <div class="relative w-fit">
   <span
-    class="text-xs pb-1 text-primary"
+    class="text-base font-bold font-en pb-1 text-orange-800 lg:text-lg"
     >{titleEn}</span
   >
-  <span class="block bg-primary w-full h-[2px] rounded-full"></span>
+  <span class="block bg-orange-800 w-full h-[2px] rounded-full"></span>
 </div>
   <Tag class="text-3xl font-medium mt-1" set:html={titleJa}/>
