@@ -38,7 +38,7 @@ const Data = [
 <div class=" grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16 mt-10">
   {Data.map(data => (
     <div class="flex flex-col gap-1">
-      <div class="bg-primary rounded-lg">
+      <div class="bg-orange-800 rounded-lg">
         <div class="group relative aspect-video rounded-[6px] overflow-hidden m-[6px]">
           <a class="" href={data.href} target={data.target ? "_blank" : "_self"}>
             <div class="absolute z-[1] w-full h-full bg-[#000] bg-opacity-0 transition duration-300 flex justify-center items-center group-hover:bg-opacity-30">
@@ -51,7 +51,9 @@ const Data = [
       <div class="h-full flex flex-col justify-between">
       <div class="mt-2 lg:mt-4">
         <h2 class="font-medium">{data.title}</h2>
+        <div class="my-[6px]">
         <HeadingLine/>
+        </div>
         <p class="text-xs/[2] text-justify" set:html={data.text}/>
       </div>
       <div class="flex flex-wrap gap-x-1 gap-y-2 mt-2">

@@ -3,6 +3,7 @@ import Layout from "@/layouts/LayoutsPortfolio.astro";
 import PortfolioMv from "@/components/portfolio/index/PortfolioMv.astro";
 import Profile from "@/components/portfolio/index/Profile.astro";
 import Gallery from "@/components/portfolio/index/Gallery.astro";
+import Skill from "@/components/portfolio/index/Skill.astro";
 ---
 
 <Layout
@@ -10,9 +11,10 @@ import Gallery from "@/components/portfolio/index/Gallery.astro";
   description="たかぎ なみのポートフォリオです。プロフィール、実績などを公開しています。"
   breadcrumbs={[]}
 >
-  <main class="py-32">
+  <main class="py-24 lg:py-32">
     <PortfolioMv />
     <Profile />
+    <Skill/>
     <Gallery />
   </main>
 </Layout>
