@@ -21,6 +21,12 @@ const deveItems = [
     experience: "2020.12~",
   },
   {
+    title: "Adobe Photoshop",
+    src: "",
+    text: "",
+    experience: "2022.04~",
+  },
+  {
     title: "STUDIO",
     src: "/image/portfolio/devicon/deve-logo07.svg",
     text: "",
@@ -30,13 +36,20 @@ const deveItems = [
     src: "",
     text: "",
   },
+  {
+    title: "Vercel",
+    src: "",
+    text: "",
+  },
 ];
 ---
-<!-- <h2>使用言語・フレームワーク 等</h2> -->
-<ul class="mt-10 lg:mt-20 grid grid-cols-1 gap-x-20 gap-y-8 md:grid-cols-2">
-  {deveItems.map(item => (
-    <li>
-      <DeveItem src={item.src} title={item.title} text={item.text} experience={item.experience} itemtype="tool" />
-    </li>
-  ))}
-</ul>
+<section class="mt-10 lg:mt-24">
+  <h2 class="text-xl/[2] lg:text-2xl/[2]">使用ツールについて</h2>
+  <ul class="mt-10 lg:mt-12 grid grid-cols-1 gap-x-20 gap-y-12 md:grid-cols-2">
+    {deveItems.map(item => (
+      <li>
+        <DeveItem src={item.src} title={item.title} text={item.text} experience={item.experience} itemtype="tool" />
+      </li>
+    ))}
+  </ul>
+</section>

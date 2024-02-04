@@ -30,15 +30,17 @@ const deveItems = [
   {
     title: "Graph QL",
     src: "/image/portfolio/devicon/deve-logo04.svg",
-    text: "WordPressからデータ取得のために使用。<br/>ドキュメントなどを確認しながら実装することができる。<br/>クライアントが関わるプロジェクトなどで使用した経験はなく、<br/>現職の自社サイトの改善などで使用。"
+    text: "WordPressからデータ取得のために使用。<br/>使用する機会は少ないですが、ドキュメントなどを確認しながら実装しています。"
   }
 ];
 ---
-<!-- <h2>使用言語・フレームワーク 等</h2> -->
-<ul class="mt-10 lg:mt-20 grid grid-cols-1 gap-x-20 gap-y-8 md:grid-cols-2">
+<section class="mt-10 lg:mt-24">
+<h2 class="text-xl/[2] lg:text-2xl/[2]">使用言語・フレームワークについて</h2>
+<ul class="mt-10 lg:mt-12 grid grid-cols-1 gap-x-20 gap-y-12 md:grid-cols-2">
   {deveItems.map(item => (
     <li>
       <DeveItem src={item.src} title={item.title} text={item.text} />
     </li>
   ))}
 </ul>
+</section>
