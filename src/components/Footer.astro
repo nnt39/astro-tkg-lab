@@ -7,17 +7,22 @@ interface Props {
   breadcrumbs?: Breadcrumb[] | undefined;
 }
 
-const { breadcrumbs } = Astro.props;
+const menuItems = [
+  { href: '/portfolio/profile', text_en: 'Tkg?', text_ja:'プロフィール' },
+  { href: '/portfolio/service', text_en: 'sKill!', text_ja:'学んだ技術' },
+  { href: '/portfolio/gallery', text_en: 'Gallery!', text_ja:'つくったもの' }
+];
 
+const { breadcrumbs } = Astro.props;
 import Breadcrumb from "@/components/Breadcrumb.astro";
 ---
-
+<footer>
 <div class="bg-yellow-200 px-6 py-1 lg:px-[108px]">
   <div class="max-w-2lg mx-auto">
     <Breadcrumb breadcrumbs={breadcrumbs} />
   </div>
 </div>
-<footer class="bg-[#F29544] px-6 pt-10 pb-20 lg:pb-20 lg:px-[108px]">
+<div class="bg-[#F29544] px-6 pt-10 pb-20 lg:pb-20 lg:px-[108px]">
   <div class="max-w-2lg mx-auto grid grid-cols-1 xl:items-center gap-y-8 lg:grid-cols-12">
     <div class="lg:col-start-1 lg:col-span-3">
       <a href="/portfolio" class="group flex gap-2">
@@ -27,25 +32,17 @@ import Breadcrumb from "@/components/Breadcrumb.astro";
           width="30"
           height="30"
         />
-        <span class="text-lg/[2] text-white transition-color duration-300 group-hover:text-brown">TKG Portfolio</span>
+        <span class="text-lg/[2] text-white font-en font-medium transition-color duration-300 group-hover:text-brown">TKG Portfolio</span>
       </a>
     </div>
     <ul class="flex flex-col gap-2 justify-between items-end text-right lg:col-span-6 lg:col-start-7 xl:flex-row">
-      <li class="relative w-fit px-[2px]">
-        <a href="/portfolio/profile">
-          <span class="text-white transition-color duration-300 hover:text-brown relative z-[1]">Tkg? - プロフィール</span>
-        </a>
-      </li>
-      <li class="relative w-fit px-[2px]">
-        <a href="/portfolio/service">
-          <span class="text-white transition-color duration-300 hover:text-brown relative z-[1]">sKill! - 学んだ技術</span>
-        </a>
-      </li>
-      <li class="relative w-fit px-[2px]">
-        <a href="/portfolio/gallery">
-          <span class="text-white transition-color duration-300 hover:text-brown relative z-[1]">Gallery! - つくったもの</span>
-        </a>
-      </li>
+      {menuItems.map(item => (
+        <li class="relative w-fit px-[2px]">
+          <a href={item.href}>
+            <p class="text-white transition-color duration-300 hover:text-brown relative z-[1]"><span class="font-en font-medium">{item.text_en}</span> - <span>{item.text_ja}</span></p>
+          </a>
+        </li>
+      ))}
     </ul>
   </div>
 </footer>

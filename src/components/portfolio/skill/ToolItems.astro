@@ -1,0 +1,42 @@
+---
+import DeveItem from "@/components/portfolio/skill/DeveItem.astro";
+
+const deveItems = [
+  {
+    title: "GitHub/GitLab",
+    src: "/image/portfolio/devicon/deve-logo06.svg",
+    text: "バージョン管理システムは主にGitHubを使用。GitHub Actionsを用いてWordPressサイトのCIを組む経験もあり。コミットは、作業に対して細かくするよう癖づけている。",
+    experience: "2022.01~", 
+  },
+  {
+    title: "Figma",
+    src: "/image/portfolio/devicon/deve-logo08.svg",
+    text: "独学2020年12月頃〜、実務経験2022.4〜（約2年）デザインツールとして主に使用。<br>保守案件での要件整理やデザイン調整などをすることもあり。<br>仕様などもFigma上でデザイナーとやり取りすることも多数あり。",
+    experience: "2021.05~",
+  },
+  {
+    title: "Adobe XD",
+    src: "",
+    text: "",
+    experience: "2020.12~",
+  },
+  {
+    title: "STUDIO",
+    src: "/image/portfolio/devicon/deve-logo07.svg",
+    text: "",
+  },
+  {
+    title: "SVGator",
+    src: "",
+    text: "",
+  },
+];
+---
+<!-- <h2>使用言語・フレームワーク 等</h2> -->
+<ul class="mt-10 lg:mt-20 grid grid-cols-1 gap-x-20 gap-y-8 md:grid-cols-2">
+  {deveItems.map(item => (
+    <li>
+      <DeveItem src={item.src} title={item.title} text={item.text} experience={item.experience} itemtype="tool" />
+    </li>
+  ))}
+</ul>

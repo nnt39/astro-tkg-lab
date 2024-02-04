@@ -1,0 +1,44 @@
+---
+import DeveItem from "@/components/portfolio/skill/DeveItem.astro";
+
+const deveItems = [
+  {
+    title: "HTML/CSS",
+    src: "/image/portfolio/devicon/deve-logo01.svg",
+    text: "独学2020年9月頃〜、実務経験2022.4〜（約2年）"
+  },
+  {
+    title: "WordPress",
+    src: "/image/portfolio/devicon/deve-logo02.svg",
+    text: "独学2020年12月頃〜、実務経験2022.4〜（約2年）<br/>テーマ制作はクラシックテーマの開発がメイン。<br/>現職では、WordPressサイト約13サイトの保守を担当、<br/>テーマの改善提案や実装などをしている。"
+  },
+  {
+    title: "PHP",
+    src: "/image/portfolio/devicon/deve-logo02.svg",
+    text: "勉強開始2020年12月頃、実務経験2022.4〜（約2年）<br/>WordPressの実装に伴い経験。"
+  },
+  {
+    title: "Next.js",
+    src: "/image/portfolio/devicon/deve-logo03.png",
+    text: "主にNext.jsで制作されたプロジェクトの運用保守を担当。"
+  },
+  {
+    title: "React",
+    src: "/image/portfolio/devicon/deve-logo05.svg",
+    text: "新規開発プロジェクトで開発経験は少なく、社内課題やサイトの保守で主に経験。「りあクト!」やUdemyなどで教材を買うなどして勉強。<br/>※課題内容:非公開プロジェクトのデザインデータを実装。課題についての振り返り記事は<a class='text-orange-800 border-b border-orange-800 border-opacity-0 transition duration-200 hover:border-opacity-100' href='https://necco.inc/note/17932' target='_blank'>こちら</a>をご覧ください。）"
+  },
+  {
+    title: "Graph QL",
+    src: "/image/portfolio/devicon/deve-logo04.svg",
+    text: "WordPressからデータ取得のために使用。<br/>ドキュメントなどを確認しながら実装することができる。<br/>クライアントが関わるプロジェクトなどで使用した経験はなく、<br/>現職の自社サイトの改善などで使用。"
+  }
+];
+---
+<!-- <h2>使用言語・フレームワーク 等</h2> -->
+<ul class="mt-10 lg:mt-20 grid grid-cols-1 gap-x-20 gap-y-8 md:grid-cols-2">
+  {deveItems.map(item => (
+    <li>
+      <DeveItem src={item.src} title={item.title} text={item.text} />
+    </li>
+  ))}
+</ul>
