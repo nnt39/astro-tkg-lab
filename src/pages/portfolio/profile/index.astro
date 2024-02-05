@@ -22,13 +22,12 @@ import LayoutsPortfolio from "@/layouts/LayoutsPortfolio.astro";
               <img class="object-cover min-h-full min-w-full" src="/image/portfolio/profile/profile-image.jpg" alt="たかぎの写真">
             </div>
           </div>
-          <div class="">
+          <div class="relative flex-1">
             <SectionHeading title="たかぎ なみ"/>
-            <p class="text-sm/[2]">秋田県花火の街出身。季節の花火が綺麗な街です。<br>
-            1995年5月生まれの28歳です。<br>
-            農業高校を卒業して、8年間銀行に勤務し、主に渉外担当として従事。<br>
-            現在はフロントエンドエンジニアとして働いています。<br>
-            趣味はライブに行くこと。主にヴィジュアル系。<br>ヴィジュアル系好きは、14年目です。<br>
+            <p class="text-sm/[2]">秋田県の季節の花火が綺麗な街で生まれ育った、<br class="hidden lg:block">1995年5月生まれの28歳です。<br>
+            農業高校を卒業して、地方銀行に入行し、主に渉外担当として8年勤務しました。<br class="hidden lg:block">退職後は、制作会社でフロントエンドエンジニアとして働いています。<br>
+            趣味はライブに行くこと。主にヴィジュアル系が好きで、15年目になりました。<br>
+            小さい頃から両親に「ヘルメット」とあだ名をつけられるぐらい髪が厚く、<br class="hidden lg:block">重いので髪柱を綺麗に立てられるヘドバンに憧れています。<br>
             好きな言葉は「自分らしく自分裏切れ」。
           </p>
           </div>
@@ -37,49 +36,26 @@ import LayoutsPortfolio from "@/layouts/LayoutsPortfolio.astro";
         <DotDown/>
 
         {/* メッセージ */}
-        <section class="lg:mx-auto lg:w-fit relative border-4 border-orange-800 rounded-2xl bg-yellow-10 pt-6 px-6 pb-10 lg:p-10">
+        <section class="lg:mx-auto lg:w-fit relative border-4 border-orange-800 rounded-2xl bg-yellow-10 pt-6 px-6 pb-10 lg:p-10 md:mr-32">
           <h2 class="text-xl/[1.6] font-medium">「誰かの役に立ちたい」</h2>
           <div class="my-[6px]">
             <HeadingLine/>
           </div>
           <div>
             <p class="text-sm/[2]">小さい頃から何かを作ったりするのが好きでした。「誰かの役に立つ」ことが大好きです。<br>
-              地方銀行員として、沢山のお客さまの悩みに寄り添い培った、「ニーズに合わせた課題解決力」や、<br>
+              地方銀行員として、沢山のお客さまの悩みに寄り添い培った、「ニーズに合わせた課題解決力」や、<br class="hidden lg:block">
               少人数のチームでの制作経験も、今後の業務に活かすことができると思います。</p>
           </div>
-          <img
-            class="w-12 md:w-20 translate-y-[1px] absolute bottom-0 right-0"
-            src="/image/common/tkg-icon.svg"
-            alt=""
-            width="30"
-            height="30"
-          />
+          <img class="absolute z-[-1] right-0 bottom-0 translate-x-36 hidden md:block" src="/image/portfolio/common/botton-kokke.svg" alt="">
+          <img class="absolute z-[1] right-0 top-0 -translate-y-[7.3rem] w-32 md:hidden" src="/image/portfolio/common/message-kokke.svg" alt="">
         </section>
 
         <DotDown/>
 
-        {/* おすすめのTKGアレンジ */}
-        {/*
-        <section class="">
-          <h2 class="text-lg/[1.6] flex gap-1">
-            <span>おすすめのTKGアレンジ</span><img
-            class="w-4 translate-y-[1px]"
-            src="/image/common/tkg-icon.svg"
-            alt=""
-            width="30"
-            height="30"
-          />
-          <span>ジャバンのり × 醤油</span></h2>
-          <HeadingLine/>
-          <div>
-            <p class="text-sm/[2]">シンプルなTKGに広がる、海苔と胡麻油の風味が最高です！</p>
-          </div>
-        </section> */}
-
         {/* 好きなこと */}
         <section class="mx-auto max-w-[808px]">
           <SectionHeading title="好きなこと"/>
-          <ul class="pt-10 flex flex-col gap-14 lg:px-20">
+          <ul class="pt-10 flex flex-col gap-14 lg:px-20 lg:gap-28">
             <li class="">
               <LikeItem 
               title="ライブ"
@@ -111,7 +87,7 @@ import LayoutsPortfolio from "@/layouts/LayoutsPortfolio.astro";
             <li class="">
               <LikeItem 
               title="お酒" 
-              text="レモンサワーが好きです。お気に入りはシンレモンサワー🍋<br>時々ワインも嗜みます🍷" 
+              text="レモンサワーが好きです。お気に入りは、レモンのプロが開発した<a href='https://www.sapporobeer.jp/shin-lemon_sour/' target='_blank' class='transition-colors duration-300 hover:text-orange-800'>ニッポンのシンレモンサワー🍋時々ワインも嗜みます🍷" 
               src="/image/portfolio/profile/profile-like-02.jpg" 
               textImage="/image/portfolio/profile/profile-text-02.svg"
               rotate="rotate-6"
