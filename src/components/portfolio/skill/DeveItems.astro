@@ -5,37 +5,38 @@ const deveItems = [
   {
     title: "HTML/CSS",
     src: "/image/portfolio/devicon/deve-logo01.svg",
-    text: "独学2020年9月頃〜開始。<br/>保守のしやすいコードを書くため、コンポーネント指向、また、適切なマークアップを心がけています。<br/>最近は、CSSフレームワーク「Tailwind CSS」を愛用。Scssでの実装も可能です。"
-  },
-  {
-    title: "JavaScript",
-    src: "/image/portfolio/devicon/deve-logo09.png",
-    text: ""
-  },
-  {
-    title: "TypeScript",
-    src: "/image/portfolio/devicon/deve-logo10.png",
-    text: ""
-  },
-  {
-    title: "GSAP",
-    src: "",
-    text: ""
+    text: "学習2020年9月頃〜開始。<br/>保守のしやすいコードを書くため、コンポーネント指向、また、適切なマークアップを心がけています。<br/>最近は、CSSフレームワーク「Tailwind CSS」を愛用。Scssでの実装も可能です。"
   },
   {
     title: "WordPress",
     src: "/image/portfolio/devicon/deve-logo02.svg",
-    text: "独学2020年12月頃〜開始。<br/>テーマ制作はクラシックテーマの開発がメイン。<br/>現職では、WordPressサイト約13サイトの保守を担当、<br/>テーマの改善提案や実装などをしている。"
+    text: "学習2020年12月頃〜開始。<br/>テーマ制作はクラシックテーマの開発がメイン。<br/>現職では、WordPressサイト約13サイトの保守を担当、<br/>テーマの改善提案や実装などをしています。"
+  },
+  {
+    title: "JavaScript",
+    src: "/image/portfolio/devicon/deve-logo09.png",
+    text: "学習2020年10月〜開始。当初苦手意識がありましたが、最近は面白さを感じています。プロジェクトによって使用方法は様々ですが、メニューの動作やGSAPの設定、Lottieの設定などにも使用しています。"
+  },
+  {
+    title: "TypeScript",
+    src: "/image/portfolio/devicon/deve-logo10.png",
+    text: "学習2022年4月〜開始。当サイトで利用しています。実務でもTypeScriptを使用するプロジェクトが多々あり、経験を積むことができています。"
+  },
+  {
+    title: "GSAP",
+    src: "/image/portfolio/devicon/deve-logo16.png",
+    text: "メニューの動作設定や出現アニメーションなどに使用しています。",
+    experience: "2023.07~",
   },
   {
     title: "PHP",
     src: "/image/portfolio/devicon/deve-logo11.svg",
-    text: "勉強開始2020年12月頃、実務経験2022.4〜（約2年）<br/>WordPressの実装に伴い経験。"
+    text: "学習2020年12月頃〜開始。<br/>WordPressの実装に伴い経験。主にフロントでの実装経験があります。"
   },
   {
     title: "Astro",
     src: "/image/portfolio/devicon/deve-logo14.png",
-    text: ""
+    text: "LPサイトやコーポレートサイトなどの実装を経験。"
   },
   {
     title: "Next.js",
@@ -45,7 +46,7 @@ const deveItems = [
   {
     title: "React",
     src: "/image/portfolio/devicon/deve-logo05.svg",
-    text: "新規開発プロジェクトで開発経験は少なく、社内課題やサイトの保守で主に経験。「りあクト!」やUdemyなどで教材を買うなどして勉強。<br/>※課題内容:非公開プロジェクトのデザインデータを実装。課題についての振り返り記事は<a class='text-orange-800 border-b border-orange-800 border-opacity-0 transition duration-200 hover:border-opacity-100' href='https://necco.inc/note/17932' target='_blank'>こちら</a>をご覧ください。）"
+    text: "新規開発プロジェクトで開発経験は少なく、社内課題やサイトの保守で主に経験。「りあクト!」やUdemyなどで教材を買うなどして勉強。<br/>※課題内容：非公開プロジェクトのデザインデータを実装。課題についての振り返り記事は<a class='text-orange-800 border-b border-orange-800 border-opacity-0 transition duration-200 hover:border-opacity-100' href='https://necco.inc/note/17932' target='_blank'>こちら</a>をご覧ください。）"
   },
   {
     title: "Graph QL",
@@ -54,8 +55,8 @@ const deveItems = [
   }
 ];
 ---
-<section class="mt-10 lg:mt-24">
-<h2 class="text-xl/[2] lg:text-2xl/[2]">使用言語・フレームワークについて</h2>
+<section>
+<h2 class="text-xl/[2] font-medium lg:text-2xl/[2]">言語・フレームワークなどについて</h2>
 <ul class="mt-10 lg:mt-12 grid grid-cols-1 gap-x-20 gap-y-12 md:grid-cols-2">
   {deveItems.map(item => (
     <li>

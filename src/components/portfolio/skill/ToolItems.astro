@@ -5,47 +5,46 @@ const deveItems = [
   {
     title: "GitHub/GitLab",
     src: "/image/portfolio/devicon/deve-logo06.svg",
-    text: "バージョン管理システムは主にGitHubを使用。GitHub Actionsを用いてWordPressサイトのCIを組む経験もあり。コミットは、作業に対して細かくするよう癖づけている。",
+    text: "バージョン管理システムは主にGitHubを使用。GitHub Actionsを用いてWordPressサイトのCIを組む経験もあり。作業に対して細かくコミットするよう心がけています。",
     experience: "2022.01~", 
   },
   {
     title: "Figma",
     src: "/image/portfolio/devicon/deve-logo08.svg",
-    text: "独学2020年12月頃〜、実務経験2022.4〜（約2年）デザインツールとして主に使用。<br>保守案件での要件整理やデザイン調整などをすることもあり。<br>仕様などもFigma上でデザイナーとやり取りすることも多数あり。",
-    experience: "2021.05~",
+    text: "デザインツールとして主に使用。<br>保守案件での要件整理やデザイン調整などをすることもあり。<br>仕様などもFigma上でデザイナーとやり取りすることも多数あり。",
+    experience: "2021.01~",
   },
   {
     title: "Adobe XD",
-    src: "",
-    text: "",
+    src: "/image/portfolio/devicon/deve-logo15.png",
+    text: "XDのデザインデータから実装することもあります。",
     experience: "2020.12~",
   },
-  // {
-  //   title: "Adobe Photoshop",
-  //   src: "",
-  //   text: "",
-  //   experience: "2022.04~",
-  // },
   {
     title: "STUDIO",
     src: "/image/portfolio/devicon/deve-logo07.svg",
-    text: "",
+    text: "STUDIOでの実装経験があります。",
     experience: "2022.07~",
   },
   {
     title: "SVGator",
     src: "/image/portfolio/devicon/deve-logo13.png",
     text: "SVGアニメーション作成時に使用。当サイトのアニメーションにも使用しています。",
+    experience: "2022.05~",
   },
   {
     title: "Vercel",
     src: "/image/portfolio/devicon/deve-logo12.svg",
     text: "AstroやNext.jsなどのホスティングに使用。当サイトもVercelでホスティングしています。",
   },
+  {
+    title: "microCMS",
+    text: "AstroやNext.jsなどのホスティングに使用。当サイトもVercelでホスティングしています。",
+  },
 ];
 ---
-<section class="mt-10 lg:mt-24">
-  <h2 class="text-xl/[2] lg:text-2xl/[2]">使用ツールについて</h2>
+<section>
+  <h2 class="text-xl/[2] font-medium lg:text-2xl/[2]">使用ツール・サービスについて</h2>
   <ul class="mt-10 lg:mt-12 grid grid-cols-1 gap-x-20 gap-y-12 md:grid-cols-2">
     {deveItems.map(item => (
       <li>
