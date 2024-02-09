@@ -87,7 +87,7 @@ import LayoutsPortfolio from "@/layouts/LayoutsPortfolio.astro";
             <li class="">
               <LikeItem 
               title="お酒" 
-              text="レモンサワーが好きです。お気に入りは、レモンのプロが開発した<a href='https://www.sapporobeer.jp/shin-lemon_sour/' target='_blank' class='transition-colors duration-300 hover:text-orange-800'>ニッポンのシンレモンサワー🍋時々ワインも嗜みます🍷" 
+              text="レモンサワーが好きです。お気に入りは、レモンのプロが開発した<a href='https://www.sapporobeer.jp/shin-lemon_sour/' target='_blank' class='transition-colors duration-300 hover:text-orange-800'>ニッポンのシンレモンサワー</a>🍋時々ワインも嗜みます🍷" 
               src="/image/portfolio/profile/profile-like-02.jpg" 
               textImage="/image/portfolio/profile/profile-text-02.svg"
               rotate="rotate-6"
@@ -97,9 +97,21 @@ import LayoutsPortfolio from "@/layouts/LayoutsPortfolio.astro";
           </ul>
         </section>
 
-        {/*
         <DotDown/>
-        */}
+
+        {/* こっけの紹介 */}
+        <section class="mx-auto max-w-[808px]">
+          <SectionHeading title="TKG公式キャラクター"/>
+          <div class="mt-10 flex flex-col gap-10 items-center md:flex-row">
+            <img class="w-3/4 md:w-1/2 max-w-[250px]" src="/image/portfolio/profile/profile-kokke02.svg" alt="TKG（卵かけご飯）を持ったニワトリのキャラクター">
+            <div class="flex flex-col gap-4">
+              <h3 class="flex gap-1 items-center">
+                <span class="text-lg/[2] font-medium lg:text-2xl/[1.6]">こっけ</span>
+                <img class="w-6 translate-y-[3px]" src="/image/portfolio/common/egg.svg" alt=""></h3>
+              <p class="text-sm/[2] lg:text-base/[2]">頭の上の卵がトレードマーク。<br/>明るくて人懐っこい性格。誰とでも友達になれる社交的な性格。<br/>卵かけご飯をこよなく愛し、「卵かけご飯」のアレンジレシピを広めている。</p>
+            </div>
+          </div>
+        </section>
 
       </div>
       </section>
