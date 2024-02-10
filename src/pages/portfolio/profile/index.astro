@@ -2,7 +2,8 @@
 import PageHeading from "@/components/portfolio/common/PageHeading.astro";
 import DotDown from "@/components/portfolio/profile/DotDown.astro";
 import HeadingLine from "@/components/portfolio/profile/HeadingLine.astro";
-import LikeItem from "@/components/portfolio/profile/LikeItem.astro";
+import HistoryItems from "@/components/portfolio/profile/HistoryItems.astro";
+import LikeItemList from "@/components/portfolio/profile/LikeItemList.astro";
 import SectionHeading from "@/components/portfolio/profile/SectionHeading.astro";
 import LayoutsPortfolio from "@/layouts/LayoutsPortfolio.astro";
 ---
@@ -55,46 +56,7 @@ import LayoutsPortfolio from "@/layouts/LayoutsPortfolio.astro";
         {/* 好きなこと */}
         <section class="mx-auto max-w-[808px]">
           <SectionHeading title="好きなこと"/>
-          <ul class="pt-10 flex flex-col gap-14 lg:px-20 lg:gap-28">
-            <li class="">
-              <LikeItem 
-              title="ライブ"
-              text="主にソロで<a class='transition-colors duration-200 hover:text-orange-800' href='/portfolio/profile/live'>ライブ</a>参戦しています。<br>最近はユナイトというバンド中心に遠征。ヴィジュアル系が好きです。<br>他にもONE OK ROCK、感覚ピエロや地元のフェスなども参戦します。"
-              src="/image/portfolio/profile/profile-like-01.jpg"
-              textImage="/image/portfolio/profile/profile-text-01.svg"
-              flexDirectionReverse={false}
-              />
-            </li>
-            <li class="">
-              <LikeItem 
-              title="ゲーム" 
-              text="FFシリーズが好きです。今の楽しみはFF7 REVERSE。最近、龍が如くも始めました。本編を進めるよりもサブストーリーなどを進めるのが好きです。もちろん本編も楽しみます！" 
-              src="/image/portfolio/profile/profile-like-04.jpg" 
-              textImage="/image/portfolio/profile/profile-text-04.svg"
-              rotate="rotate-6"
-              minImage={false}
-              />
-            </li>
-            <li class="">
-              <LikeItem 
-              title="旅行" 
-              text="プライベートでは、家族旅行・ソロ活どちらも楽しんでいます。お気に入りは「函館」。フェリーでゆったり旅がお気に入りです。" 
-              src="/image/portfolio/profile/profile-like-03.jpg" 
-              textImage="/image/portfolio/profile/profile-text-03.svg"
-              flexDirectionReverse={false}
-              />
-            </li>
-            <li class="">
-              <LikeItem 
-              title="お酒" 
-              text="レモンサワーが好きです。お気に入りは、レモンのプロが開発した<a href='https://www.sapporobeer.jp/shin-lemon_sour/' target='_blank' class='transition-colors duration-300 hover:text-orange-800'>ニッポンのシンレモンサワー</a>🍋時々ワインも嗜みます🍷" 
-              src="/image/portfolio/profile/profile-like-02.jpg" 
-              textImage="/image/portfolio/profile/profile-text-02.svg"
-              rotate="rotate-6"
-              minImage={false}
-              />
-            </li>
-          </ul>
+          <LikeItemList/>
         </section>
 
         <DotDown/>
@@ -102,71 +64,7 @@ import LayoutsPortfolio from "@/layouts/LayoutsPortfolio.astro";
         {/* 歴史 */}
         <section class="mx-auto max-w-[808px]">
           <SectionHeading title="たかぎの今まで"/>
-          <ol class="mt-10 flex flex-col gap-10">
-            <li>
-              <div class="flex items-start gap-6 lg:items-center lg:gap-10">
-                <div class="max-w-[150px] flex-1">
-                  <img src="/image/portfolio/profile/baby-kokke.svg" alt="">
-                </div>
-                <div class="flex flex-col gap-2 flex-1">
-                  <span class="font-en text-2xl/[1] text-orange-800 translate-y-[3px]">1995</span>
-                  <p>季節の花火が綺麗な街、秋田県大仙市で誕生。<br class="hidden lg:block">小さい頃ついたあだ名はヘルメット。今見ても驚きの毛量です。</p>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="flex items-start gap-6 lg:items-center lg:gap-10">
-                <div class="max-w-[150px] flex-1">
-                </div>
-                <div class="flex flex-col gap-2 flex-1">
-                  <span class="font-en text-2xl/[1] text-orange-800 translate-y-[3px]">2000</span>
-                  <p>本を読んだり、絵を描くのが好きな幼少期。当時得意な絵は、名探偵コナン。</p>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="flex items-start gap-6 lg:items-center lg:gap-10">
-                <div class="max-w-[150px] flex-1">
-                  <img src="/image/portfolio/profile/piccolo-kokke.svg" alt="">
-                </div>
-                <div class="flex flex-col gap-2 flex-1">
-                  <span class="font-en text-2xl/[1] text-orange-800 translate-y-[3px]">2010</span>
-                  <p>マーチングに没頭。武器はピッコロ。<br class="hidden lg:block"/>100人チームで全国大会に出場、最優秀賞頂きました。</p>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="flex items-start gap-6 lg:items-center lg:gap-10">
-                <div class="max-w-[150px] flex-1">
-                  <img src="/image/portfolio/profile/bank-kokke.svg" alt="">
-                </div>
-                <div class="flex flex-col gap-2 flex-1">
-                  <span class="font-en text-2xl/[1] text-orange-800 translate-y-[3px]">2014</span>
-                  <p>高卒で地方銀行に就職。苦手なコミュニケーションを克服しようと、<br class="hidden lg:block"/>研修では積極的に大学生のチームに潜入。<br class="hidden lg:block">学歴の差でディスカッションに思ったように参加できず、見事に散りました。</p>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="flex items-start gap-6 lg:items-center lg:gap-10">
-                <div class="max-w-[150px] flex-1">
-                  <img src="/image/portfolio/profile/code-kokke.svg" alt="">
-                </div>
-                <div class="flex flex-col gap-2 flex-1">
-                  <span class="font-en text-2xl/[1] text-orange-800 translate-y-[3px]">2020</span>
-                  <p>ウェブ制作の学習を独学で始める。<br/>中学時代アメーバブログのレイアウトを編集するのが楽しかったことを思い出す。「私、HTMLとCSSもしかしてやっていたのでは…？」<br/>初めて作ったウェブサイトは友人が経営する飲食店のサイトでした。</p>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="flex items-start gap-6 lg:items-center lg:gap-10">
-                <div class="max-w-[150px] flex-1"></div>
-                <div class="flex flex-col gap-2 flex-1">
-                  <span class="font-en text-2xl/[1] text-orange-800 translate-y-[3px]">2022</span>
-                  <p>銀行を退職し、ウェブデザイン会社へ入社。</p>
-                </div>
-              </div>
-            </li>
-          </ol>
+          <HistoryItems/>
         </section>
 
         <DotDown/>

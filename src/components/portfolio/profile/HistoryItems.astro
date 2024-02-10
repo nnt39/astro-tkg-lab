@@ -1,0 +1,58 @@
+---
+const historyData = [
+  {
+    year: "1995",
+    image: "/image/portfolio/profile/baby-kokke.svg",
+    description: "季節の花火が綺麗な街、秋田県大仙市で誕生。<br class='hidden lg:block'>小さい頃ついたあだ名はヘルメット。今見ても驚きの毛量です。"
+  },
+  {
+    year: "2000",
+    image: "",
+    description: "本を読んだり、絵を描くのが好きな幼少期。当時得意な絵は、名探偵コナン。"
+  },
+  {
+    year: "2010",
+    image: "/image/portfolio/profile/piccolo-kokke.svg",
+    description: "マーチングに没頭。武器はピッコロ。<br class='hidden lg:block'/>100人チームで全国大会に出場、最優秀賞頂きました。"
+  },
+  {
+    year: "2014",
+    image: "/image/portfolio/profile/bank-kokke.svg",
+    description: "高卒で地方銀行に就職。苦手なコミュニケーションを克服しようと、<br class='hidden lg:block'/>研修では積極的に大学生のチームに潜入。学歴の差でディスカッションに思ったように参加できず、見事に散りました。"
+  },
+  {
+    year: "2016",
+    image: "",
+    description: "企業内大学（研修）「ウーマンカレッジ」へ参加。30代〜50代のメンバーとチームを組み、役員の前でプレゼン。主に資料作成を担当。プレゼンが評価され頭取表彰を頂きました。"
+  },
+  {
+    year: "2020",
+    image: "/image/portfolio/profile/code-kokke.svg",
+    description: "ウェブ制作の学習を独学で始める。中学時代アメーバブログのレイアウトを編集するのが楽しかったことを思い出す。「私、HTMLとCSSもしかしてやっていたのでは…？」初めて作ったウェブサイトは友人が経営する飲食店のサイトでした。"
+  },
+  {
+    year: "2022",
+    image: "",
+    description: "銀行を退職し、ウェブデザイン会社へフロントエンドエンジニアとして入社。"
+  }
+];
+---
+<ol class="mt-10 flex flex-col gap-10">
+{historyData.map(item => 
+  <li>
+    <div class="flex items-start gap-6 lg:items-center lg:gap-10">
+      <div class="max-w-[100px] h-[100px] flex items-center justify-center lg:max-w-[150px] lg:h-[150px] flex-1">
+        { item.image ?
+          <img src={item.image} width="400" height="480" alt="">
+          :
+          <img class="w-10 lg:w-14" src="/image/portfolio/common/egg.svg" width="100" height="100" alt="">
+        }
+      </div>
+      <div class="flex flex-col gap-2 h-full flex-1">
+        <span class="font-en text-2xl/[1] text-orange-800 translate-y-[3px]" set:html={item.year}/>
+        <p set:html={item.description}/>
+      </div>
+    </div>
+  </li>
+)}
+</ol>

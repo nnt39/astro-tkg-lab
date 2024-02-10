@@ -11,7 +11,7 @@ interface Props {
 
 const { src = "", textImage = "", title="", text="", rotate="-rotate-6", flexDirectionReverse = true, minImage = true } = Astro.props;
 ---
-<div class:list={["flex flex-col gap-8 md:items-center md:gap-20 md:flex-row", flexDirectionReverse ? "md:flex-row-reverse" : "md:flex-row"]}>
+<div class:list={["flex flex-col gap-6 md:items-center md:gap-20 md:flex-row", flexDirectionReverse ? "md:flex-row-reverse" : "md:flex-row"]}>
   {/* 大きいチェキ */}
   <div class="relative flex-1">
     <div class:list={["relative z-[2] px-3 pt-3 pb-12 border-[4px] border-brown rounded w-fit mx-auto bg-white", rotate]}>
