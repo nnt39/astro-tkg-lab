@@ -1,17 +1,35 @@
 ---
 import Heading from "@/components/portfolio/common/Heading.astro";
 import ButtonBorder from "../common/ButtonBorder.astro";
+const skillData = [
+  {example:"言語",image:"/image/portfolio/devicon/deve-logo01.svg",title:"HTML/CSS", text:"保守しやすいコードを意識してコーディングを心がけています。axe DevToolsなどでチェックも欠かさず行い、アクセシビリティにも注意を払い、実装しています。"},
+  {example:"CMS",image:"/image/portfolio/devicon/deve-logo02.svg",title:"WordPress", text:"クラシックテーマ制作をメインに、テーマ制作をしています。管理者が使いやすい管理画面になるように分かりやすくなるように気をつけています。"},
+  {example:"ツール",image:"/image/portfolio/devicon/deve-logo08.svg",title:"Figma", text:"デザインツールは主にFigmaを使用。3年ほど使用しており、使用で不便することはあまりありません。"},
+]
 ---
 
 <section class="px-6 lg:px-[108px]">
-  <div class="max-w-[808px] mx-auto pt-20 lg:pt-[120px]">
+  <div class="max-w-2lg mx-auto pt-20 lg:pt-[120px]">
       <Heading titleJa="経験言語・ツール" titleEn="Skill" />
-       <div class="w-full max-w-[500px] mx-auto">
-         <!-- <object data="/image/portfolio/svg-animation/front-profile.svg" type=""></object> -->
-       </div>
         <p class="text-base/[1.6] mt-6 lg:mt-8 lg:text-lg/[2]">実務経験などについてまとめています。</p>
+        <ul class="grid grid-cols-1 mt-6 lg:mt-12 lg:grid-cols-3 gap-6 lg:gap-14">
+          {skillData.map(item => (
+            <li class="flex flex-col gap-1 lg:gap-3">
+              <h3 class="text-base/[1.6] font-medium lg:text-2xl/[1.6]">{item.example}例</h3>
+              <div class="border-4 h-full border-brown rounded-2xl p-8 flex flex-row lg:flex-col lg:items-center gap-6">
+                <img src={item.image} width="100" height="100" alt="">
+                <div class="flex flex-col lg:items-center gap-2">
+                  <h4 class="text-lg/[2] font-medium lg:text-2xl/[2]">{item.title}</h4>
+                  <p class="text-sm/[2] lg:text-base/[2]">{item.text}</p>
+                </div>
+              </div>
+              <span class="block ml-auto w-fit">など</span>
+            </li>
+          ))}
+        </ul>
       <div class="mt-6 lg:mt-12">
-      <ButtonBorder href="/portfolio/skill" text="スキルを確認する"/>
-    </div>
+        <ButtonBorder href="/portfolio/skill" text="スキルを確認する"/>
+      </div>
   </div>
 </section>
+
