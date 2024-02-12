@@ -2,34 +2,75 @@
 interface Props {
   src: string;
   textImage: string;
-  title: string; 
+  title: string;
   text: string;
   rotate?: string;
   flexDirectionReverse?: boolean;
-  minImage? : boolean;
+  minImage?: boolean;
 }
 
-const { src = "", textImage = "", title="", text="", rotate="-rotate-6", flexDirectionReverse = true, minImage = true } = Astro.props;
+const {
+  src = "",
+  textImage = "",
+  title = "",
+  text = "",
+  rotate = "-rotate-6",
+  flexDirectionReverse = true,
+  minImage = true,
+} = Astro.props;
 ---
-<div class:list={["flex flex-col gap-6 md:items-center md:gap-20 md:flex-row", flexDirectionReverse ? "md:flex-row-reverse" : "md:flex-row"]}>
+
+<div
+  class:list={[
+    "flex flex-col gap-6 md:items-center md:gap-20",
+    flexDirectionReverse ? "md:flex-row-reverse" : "md:flex-row",
+  ]}
+>
   {/* 大きいチェキ */}
   <div class="relative flex-1">
-    <div class:list={["relative z-[2] px-3 pt-3 pb-12 border-[4px] border-brown rounded w-fit mx-auto bg-white", rotate]}>
-      <div class="max-w-[200px] max-h-[240px] aspect-[5/6] flex items-center overflow-hidden rounded border-[4px] border-brown">
-        <img class="object-cover w-full h-full" src={src} width="4032" height="3024" alt="">
+    <div
+      class:list={[
+        "relative z-[2] px-3 pt-3 pb-12 border-[4px] border-brown rounded w-fit mx-auto bg-white",
+        rotate,
+      ]}
+    >
+      <div
+        class="max-w-[200px] max-h-[240px] aspect-[5/6] flex items-center overflow-hidden rounded border-[4px] border-brown"
+      >
+        <img
+          class="object-cover w-full h-full"
+          src={src}
+          width="4032"
+          height="3024"
+          alt=""
+        />
       </div>
-      <img class="absolute bottom-7 right-4 -rotate-12 w-[150px]" src={textImage} alt="">
+      <img
+        class="absolute bottom-7 right-4 -rotate-12 w-[150px]"
+        src={textImage}
+        alt=""
+      />
     </div>
     {/* 装飾チェキ */}
-    <div class="absolute bottom-0 left-1/2 md:-left-6 px-3 pt-3 pb-12 border-[3px] border-brown rounded w-fit mx-auto bg-white -rotate-12">
-      <div class="max-w-[100px] aspect-[5/6] flex items-center overflow-hidden rounded border-[3px] border-brown">
-        <img class="object-cover min-h-full min-w-full" src={src} width="4032" height="3024" alt="">
+    <div
+      class="absolute bottom-0 left-1/2 md:-left-6 px-3 pt-3 pb-12 border-[3px] border-brown rounded w-fit mx-auto bg-white -rotate-12"
+    >
+      <div
+        class="max-w-[100px] aspect-[5/6] flex items-center overflow-hidden rounded border-[3px] border-brown"
+      >
+        <img
+          class="object-cover min-h-full min-w-full"
+          src={src}
+          width="4032"
+          height="3024"
+          alt=""
+        />
       </div>
     </div>
   </div>
   {/* 本文 */}
   <div class="flex-1">
     <h3 class="text-lg/[2] font-medium md:text-2xl/[2]">{title}</h3>
-    <p class=" text-justify" set:html={text}/>
+    <p class="text-justify" set:html={text} />
   </div>
 </div>
