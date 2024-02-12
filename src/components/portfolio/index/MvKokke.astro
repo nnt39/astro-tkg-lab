@@ -1,17 +1,11 @@
 ---
-// interface Props {
-//   iconSrc: string;
-//   kokkeSrc: string;
-// }
-
-// const { iconSrc="", kokkeSrc="" } = Astro.props;
 const mvKokkeData = [
     { iconSrc: "/image/portfolio/mv/mv-icon01.svg", kokkeSrc: "/image/portfolio/mv/mv-kokke01.svg" },
     { iconSrc: "/image/portfolio/mv/mv-icon02.svg", kokkeSrc: "/image/portfolio/mv/mv-kokke02.svg" },
     { iconSrc: "/image/portfolio/mv/mv-icon03.svg", kokkeSrc: "/image/portfolio/mv/mv-kokke03.svg" }
 ];
 ---
-<div class="flex justify-center gap-8">
+<div class="flex justify-center gap-8 max-w-[808px] mx-auto">
 {
 mvKokkeData.map((data) => (
 <div class="flex flex-col items-center w-[70vw] min-w-[220px]">
