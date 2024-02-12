@@ -43,3 +43,14 @@ Tailwind CSSで再現できないスタイルは、CSSを使うことも可と�
 ## アニメーションについて
 GSAPを使用する。
 
+## CMSについて
+[micro CMS](https://microcms.io/)を使用する。
+.envファイルを作成し、下記の内容を記述する。
+```
+MICROCMS_SERVICE_DOMAIN=[microCMSのドメイン]
+MICROCMS_API_KEY=[microCMSから取得したAPIキー]
+```
+
+## ホスティングについて
+Vercelを使用する。
+
