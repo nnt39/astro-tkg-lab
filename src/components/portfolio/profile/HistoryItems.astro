@@ -28,12 +28,12 @@ const historyData = [
   {
     year: "2020",
     image: "/image/portfolio/profile/code-kokke.svg",
-    description: "ウェブ制作の学習を独学で始める。中学時代アメーバブログのレイアウトを編集するのが楽しかったことを思い出す。「私、HTMLとCSSもしかしてやっていたのでは…？」初めて作ったウェブサイトは友人が経営する飲食店のサイトでした。"
+    description: "ウェブ制作の学習を独学で始める。<br class='hidden lg:block'/>中学時代アメーバブログのレイアウトを編集するのが楽しかったことを思い出す。<br class='hidden lg:block'/>「私、HTMLとCSSもしかしてやっていたのでは…？」<br class='hidden lg:block'/>ウェブサイト制作にハマり、友人が経営する飲食店のサイトを初めて制作。"
   },
   {
     year: "2022",
     image: "",
-    description: "銀行を退職し、ウェブデザイン会社へフロントエンドエンジニアとして入社。"
+    description: "8年半働いた銀行を退職し、ウェブデザイン会社へフロントエンドエンジニアとして入社。エンジニアとして経験を積んでいる。"
   }
 ];
 ---
@@ -48,9 +48,9 @@ const historyData = [
           <img class="w-10 lg:w-14" src="/image/portfolio/common/egg.svg" width="100" height="100" alt="">
         }
       </div>
-      <div class="flex flex-col gap-2 h-full flex-1">
+      <div class="flex flex-col gap-2 h-full flex-1 lg:gap-4">
         <span class="font-en text-2xl/[1] text-orange-800 translate-y-[3px]" set:html={item.year}/>
-        <p set:html={item.description}/>
+        <p class="text-sm/[2] text-justify lg:text-base/[2]" set:html={item.description}/>
       </div>
     </div>
   </li>
