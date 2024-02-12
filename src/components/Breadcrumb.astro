@@ -11,7 +11,7 @@ const { breadcrumbs } = Astro.props;
 import DotRight from "@/components/portfolio/profile/DotRight.astro";
 ---
 
-<ul class="flex gap-3">
+<ul class="flex gap-x-3 flex-wrap">
   <li class="text-sm/[2]"><a href="/portfolio" class="transition-color duration-300 text-brown hover:text-orange-800">ホーム</a></li>
   {
     breadcrumbs &&
