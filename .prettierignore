@@ -1,0 +1,7 @@
+# Prettierの整形をかけたくないファイルを追加する
+node_modules
+dist
+README.md
+.vscode
+package-lock.json
+package.json

@@ -23,21 +23,21 @@ module.exports = {
       gray: {
         50: "#f9fafb",
         100: "#f0f2f4",
-        200:"#e1e5ea",
-        300:"#cad0d8",
-        400:"#95a1b2",
-        500:"#637288",
-        600:"#475262",
-        700:"#333c47",
-        800:"#1e2329",
-        900:"#0f1115",
-        950:"#090a0c",
+        200: "#e1e5ea",
+        300: "#cad0d8",
+        400: "#95a1b2",
+        500: "#637288",
+        600: "#475262",
+        700: "#333c47",
+        800: "#1e2329",
+        900: "#0f1115",
+        950: "#090a0c",
       },
     },
     fontFamily: {
       ja: ["Zen Maru Gothic", "sans-serif"], // 400, 500, 700
       en: ["Comfortaa", "sans-serif"], // 500, 700
-      enZen: ["Zen Dots", "sans-serif"] // 500, 700
+      enZen: ["Zen Dots", "sans-serif"], // 500, 700
     },
     // extend: {
     //   spacing: {
@@ -54,7 +54,7 @@ module.exports = {
       },
       maxWidth: {
         "2lg": "1224px",
-      }
+      },
     },
   },
   plugins: [],
