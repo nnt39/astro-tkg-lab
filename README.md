@@ -1,5 +1,5 @@
 # Nami Takagi Portfolio
----
+
 ## 開発時
 ```bash
 npm install
@@ -29,8 +29,8 @@ npm run format
 │   ├── lib/
 │   │   └── microcms.ts
 │   └── pages/
-│       ├── blog/
-│       ├── portfolio/
+│       ├── blog/ （ブログ：工事中）
+│       ├── portfolio/ （ポートフォリオ）
 │       ├── 404.astro
 │       └── index.astro
 └── package.json
