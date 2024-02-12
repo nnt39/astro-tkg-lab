@@ -64,7 +64,10 @@ export type LiveResponse = {
 // APIの呼び出し
 export const getLives = async (queries?: MicroCMSQueries) => {
   const defaultQueries = { ...queries, limit: 100 }; // Set the default limit to 100
-  return await client.get<LiveResponse>({ endpoint: "live", queries: defaultQueries });
+  return await client.get<LiveResponse>({
+    endpoint: "live",
+    queries: defaultQueries,
+  });
 };
 export const getLiveDetail = async (
   contentId: string,
