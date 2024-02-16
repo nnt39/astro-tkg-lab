@@ -1,15 +1,51 @@
 ---
 import LayoutsTree from "@/layouts/LayoutsTree.astro";
+import TreeKokke from "@/components/image/TreeKokke.astro";
+const liveItems = [
+  {
+    href: "/portfolio",
+    color: "#F7004C",
+    text: "ポートフォリオ",
+  },
+  {
+    href: "/portfolio/profile/live",
+    color: "#FFA200",
+    text: "ライブ参戦履歴",
+  },
+  {
+    href: "/blog",
+    color: "#FFE978",
+    text: "ブログ",
+  },
+];
 ---
 
 <LayoutsTree title="Welcome to Astro." description="">
-  <main class="mt-40">
-    <h1 class="text-2xl uppercase font-zenMaru font-bold">TKG tree</span></h1>
-    <div class="flex flex-col gap-8 w-fit my-8">
-      <a href="/portfolio" class="bg-primary">ポートフォリオトップ</a>
-      <a href="/portfolio/profile/live" class="bg-primary">ポートフォリオ - ライブ</a>
-      <a href="/portfolio/profile" class="bg-primary">ポートフォリオ - プロフィール</a>
-      <a href="/blog" class="bg-primary">ブログ一覧</a>
-    </div>
+  <main>
+    <section class="px-6 lg:px-[108px]">
+      <div class="max-w-[1000px] mx-auto py-28 lg:py-40">
+        <h1 class="text-5xl uppercase font-en font-bold mx-auto w-fit">TKG Tree</h1>
+        <ul class="grid grid-cols-1 gap-8 mt-10 md:grid-cols-3">
+          {
+            liveItems.map(item => (
+              <li class="relative">
+                <a href={item.href} class="group">
+                  <div class="relative z-[2] flex justify-center">
+                    <div class="relative z-[1] md:flex md:justify-center translate-x-2 max-w-[230px] hidden">
+                      <TreeKokke color={item.color} />
+                      </div>
+                    <div class="md:absolute bottom-0 w-full translate-y-8 bg-orange-400 border-4 md:translate-y-8 lg:translate-y-10 lg:border-[6px] rounded-lg py-6 flex justify-center border-brown transition duration-300 group-hover:bg-brown">
+                      <span class=" text-brown text-base/[2] lg:text-xl/[2] font-medium group-hover:text-white">
+                        {item.text}
+                      </span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </section>
   </main>
 </LayoutsTree>
