@@ -1,11 +1,4 @@
 ---
-
-// interface Props {
-//   href: string;
-//   text: string;
-// }
-// const { href, text } = Astro.props;
-
 import TopGalleryItem from "./TopGalleryItem.astro";
 const galleryItems = [
   { href: "https://nejimakiya3443.com/", src: "/image/portfolio/gallery/gallery-01.jpg" },
@@ -15,7 +8,7 @@ const galleryItems = [
 ];
 ---
 
-<div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+<div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
   {galleryItems.map(item => (
     <TopGalleryItem href={item.href} src={item.src}/>
   ))}

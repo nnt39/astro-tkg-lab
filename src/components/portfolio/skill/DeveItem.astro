@@ -13,9 +13,9 @@ const { src = "/image/portfolio/devicon/icon-default.svg", title = "", experienc
 <div class="flex gap-3 items-start">
   <img class="w-14" src={src} alt="">
   <div class="flex flex-col gap-1">
-    <div class="flex items-center gap-2 lg:gap-4">
-      <span class="text-lg/[1.6] font-en font-bold">{title}</span>
-      <span class={`${itemtype === "dev" ? "bg-yellow-200" : "bg-orange-800 text-white"} px-2 text-xs/[1.6] rounded lg:text-sm/[1.6]`}>{itemtype ==="dev" ? "実務経験:" + experience : "使用期間:" + experience }</span>
+    <div class="flex items-center flex-wrap gap-x-2 lg:gap-4">
+      <span class="text-base/[1.6] font-en lg:text-lg/[1.6]">{title}</span>
+      <span class={`${itemtype === "dev" ? "bg-yellow-200" : "bg-orange-800 text-white"} px-2 py-1 text-xs/[1.2] rounded lg:text-sm/[1.2]`}>{itemtype ==="dev" ? "実務経験:" + experience : "使用期間:" + experience }</span>
     </div>
     <HeadingLine/>
     <p class="text-sm/[1.6]" set:html={text}></p>

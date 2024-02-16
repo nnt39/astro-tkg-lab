@@ -6,7 +6,7 @@ const Data = [
     src: "/image/portfolio/gallery/gallery-01.jpg",
     href:"https://nejimakiya3443.com/",
     target: true,
-    text: "夫婦で営むねじまき屋さまのウェブサイト。<br>アットホームな雰囲気のお店がサイトを見る方たちに伝わるよう、デザインから考えました。WordPressで構築、公開後も日々改善を加えています。こちらは私が初めて制作したサイトです。",
+    text: "夫婦で営むねじまき屋さまのウェブサイト。<br>アットホームな雰囲気のお店がサイトを見る方たちに伝わるよう、デザインから考えました。WordPressで構築、公開後も日々改善を加えています。こちらは私が初めて制作したサイトです。お店のお客さまからもお褒めいただいているとのことで今後も改善を続けていくサイトです。",
     tag: ["飲食店", "情報設計", "デザイン", "コーディング", "保守運用"]
   },
   {
@@ -22,7 +22,7 @@ const Data = [
     src: "/image/portfolio/gallery/gallery-03.jpg",
     href:"https://slash-school.com/1st-creative-members/members/",
     target: true,
-    text: "フリーランス育成スクールSLashにて、個性豊かなメンバー紹介を目的としたサイトです。ディレクション・デザイナー・コーダーに分かれ、3名で制作。私はデザイナーを担当。キャラクター制作から、サイトデザインまで担当しました。キャラクター制作には、VRoidを使用し、個性豊かなメンバーを表現しています。サイトデザインは、シミュレーションゲームをイメージ。ボタンUIなどのコーディングも担当しています。",
+    text: "フリーランス育成スクールSLashにて、メンバー紹介を目的としたサイトです。ディレクター・デザイナー・コーダーの3名で制作。デザイナーを担当しました。キャラクター制作には、VRoidを使用。個性豊かなメンバーを表現しています。サイトデザインは、シミュレーションゲームをイメージ。ボタンUIなどのコーディングも担当しています。",
     tag: ["課題", "チーム制作", "デザイン", "コーディング"]
   },
   {
@@ -30,31 +30,31 @@ const Data = [
     src: "/image/portfolio/gallery/gallery-04.jpg",
     href:"/portfolio",
     target: false,
-    text: "たかぎの「TKG」、卵かけご飯（TKG）から着想を得て、デザインを考えました。当サイトはAstro、microCMS、Tailwind CSSで制作しています。当時参加していたコミュニティの講師やメンバーからレビューを頂きながらブラッシュアップ。その後も改善を重ねていますが、思いの詰まったサイトです。メインのキャラクターは、「こっけ」です。",
+    text: "たかぎの「TKG」、卵かけご飯（TKG）から着想を得て、デザインを考えました。当サイトはAstro、microCMS、Tailwind CSSで制作しています。当時参加していたスクールの講師やメンバーからのレビューでブラッシュアップ。その後も改善を重ねていますが、思いの詰まったサイトです。",
     tag: ["ポートフォリオ", "情報設計", "デザイン", "コーディング", "保守運用"]
   },
 ];
 ---
-<div class=" grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16 mt-10">
+<div class=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16 mt-10">
   {Data.map(data => (
     <div class="flex flex-col gap-1">
       <div class="bg-orange-800 rounded-lg">
         <div class="group relative aspect-video rounded-[6px] overflow-hidden m-[6px]">
           <a class="" href={data.href} target={data.target ? "_blank" : "_self"}>
             <div class="absolute z-[1] w-full h-full bg-[#000] bg-opacity-0 transition duration-300 flex justify-center items-center group-hover:bg-opacity-30">
-              <span class="text-white font-medium opacity-0 transition-opacity duration-300 group-hover:opacity-100 text-xl/[2] lg:text-2xl/[2]">{data.title}</span>
+              <span class="text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100 text-xl/[2]">{data.title}</span>
             </div>
             <img class="relative object-cover min-w-full min-h-full h-full transition-transform duration-300 group-hover:scale-105" src={data.src} alt={data.title + "サイトイメージ"}>
           </a>
         </div>
       </div>
-      <div class="h-full flex flex-col justify-between">
+      <div class="h-full flex flex-col justify-between gap-4">
       <div class="mt-2 lg:mt-4">
         <h2 class="font-medium">{data.title}</h2>
         <div class="my-[6px]">
         <HeadingLine/>
         </div>
-        <p class="text-xs/[2] text-justify" set:html={data.text}/>
+        <p class="text-sm/[2] text-justify" set:html={data.text}/>
       </div>
       <div class="flex flex-wrap gap-x-1 gap-y-2 mt-2">
         {data.tag.map(tag => (
