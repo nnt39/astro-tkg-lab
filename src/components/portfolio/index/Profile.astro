@@ -5,14 +5,25 @@ import ButtonBorder from "../common/ButtonBorder.astro";
 
 <section class="px-6 lg:px-[108px]">
   <div class="max-w-2lg mx-auto pt-20 lg:pt-[120px]">
-      <Heading titleJa="プロフィール" titleEn="Profile" />
-       <div class="w-full max-w-[500px] mx-auto">
-         <object data="/image/portfolio/svg-animation/front-profile.svg" type=""></object>
-       </div>
-        <p class="text-base/[1.6] mt-6 w-fit mx-auto lg:mt-8 lg:text-lg/[2]">はじめまして。たかぎ なみと申します。<br>高校卒業後に地方銀行へ入社。窓口から渉外係まで担当。<br class="hidden md:block"/>銀行では地域のお客さまと関係性を築きながら、8年半勤務しました。<br class="hidden md:block"/>銀行退職後はウェブ制作会社へ入社し、フロントエンドエンジニアをしています。<br class="hidden md:block"/>現在は主にコーディングがメインですが、保守運用から新規案件まで携わっています。
-        </p>
-      <div class="mt-6 lg:mt-12">
-      <ButtonBorder href="/portfolio/profile" text="たかぎについて知る"/>
+    <Heading titleJa="プロフィール" titleEn="Profile" />
+    <div class="flex flex-col lg:flex-row lg:gap-20 lg:mt-10">
+      <div class="w-full max-w-[500px] lg:max-w-[400px] mx-auto">
+        <object data="/image/portfolio/svg-animation/front-profile.svg" type=""
+        ></object>
+      </div>
+      <p class="text-base/[1.6] w-fit mx-auto mt-8 lg:text-base/[2]">
+        はじめまして。たかぎ なみと申します。<br
+        />高校卒業後に地方銀行へ入社。窓口から渉外係まで担当。<br
+          class="hidden xl:block"
+        />銀行では地域のお客さまと関係性を築きながら、8年半勤務しました。<br
+          class="hidden md:block"
+        />銀行退職後はウェブ制作会社へ入社し、フロントエンドエンジニアをしています。<br
+          class="hidden xl:block"
+        />現在は主にコーディングをメインに、保守運用から新規案件まで携わっています。
+      </p>
+    </div>
+    <div class="mt-6 lg:mt-12">
+      <ButtonBorder href="/portfolio/profile" text="たかぎについて知る" />
     </div>
   </div>
 </section>

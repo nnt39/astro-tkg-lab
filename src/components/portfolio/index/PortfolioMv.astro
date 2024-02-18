@@ -4,10 +4,30 @@ import MvKokke from "./MvKokke.astro";
 
 <div class="">
   <section class="px-6 overflow-clip lg:px-[108px]">
-    <div class="max-w-2lg mx-auto ">
+    <div class="max-w-2lg mx-auto">
       <MvKokke />
-      <h1 class="text-[12vw]/[1.1] font-en mt-8 lg:text-[100px]/[1.0] lg:mt-10">Nami Takagi<br>Portfolio.</h1>
+      <h1 class="text-[12vw]/[1.1] font-en mt-8 lg:text-[100px]/[1.0] lg:mt-10">
+        Nami Takagi<br />Portfolio.
+      </h1>
     </div>
   </section>
-  <span class="block w-full bg-[url('/image/portfolio/mv/mv-icon03.svg')] bg-contain bg-center mt-20 h-[80px] lg:mt-[120px]"></span>
+  <span
+    class="loop-bg block w-full bg-[url('/image/portfolio/mv/mv-icon03.svg')] bg-contain bg-center mt-20 h-[80px] lg:mt-[100px]"
+  ></span>
 </div>
+
+<style>
+  @keyframes scrollBackground {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: -100% 0;
+    }
+  }
+
+  .loop-bg {
+    animation: scrollBackground 50s linear infinite;
+    background-repeat: repeat-x;
+  }
+</style>
