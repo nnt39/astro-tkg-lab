@@ -4,6 +4,7 @@ import PortfolioMv from "@/components/portfolio/index/PortfolioMv.astro";
 import Profile from "@/components/portfolio/index/Profile.astro";
 import Gallery from "@/components/portfolio/index/Gallery.astro";
 import Skill from "@/components/portfolio/index/Skill.astro";
+import ScrollEgg from "@/components/portfolio/common/ScrollEgg.astro";
 ---
 
 <Layout
@@ -12,9 +13,10 @@ import Skill from "@/components/portfolio/index/Skill.astro";
   breadcrumbs={[]}
 >
   <main class="py-24 lg:py-40">
+    <ScrollEgg />
     <PortfolioMv />
     <Profile />
-    <Skill/>
+    <Skill />
     <Gallery />
   </main>
 </Layout>

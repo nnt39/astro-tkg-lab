@@ -1,0 +1,34 @@
+---
+
+---
+
+<div
+  class="fixed z-50 top-32 right-6 hidden lg:flex lg:flex-col lg:justify-center"
+>
+  <span class="text-sm/[2]">スクロール！</span>
+  <img
+    class="js-scroll opacity-0 w-10 h-10 lg:w-20 lg:h-20"
+    src="/image/portfolio/common/egg.svg"
+    alt="Let's scroll!!"
+  />
+</div>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  gsap.registerPlugin(ScrollTrigger);
+  const bodyHeight = document.body.scrollHeight;
+  const tl = gsap.timeline();
+
+  // タイムラインにアニメーションを追加
+  tl.to(".js-scroll", { rotation: 0 }).to(".js-scroll", { autoAlpha: 1 });
+  gsap.to(".js-scroll", {
+    rotation: "+=3650",
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".js-scroll",
+      scrub: true, // スクロール量に合わせてアニメーション
+      end: `+=${bodyHeight}`,
+    },
+  });
+</script>

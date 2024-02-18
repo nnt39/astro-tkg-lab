@@ -1,5 +1,6 @@
 ---
 import PageHeading from "@/components/portfolio/common/PageHeading.astro";
+import ScrollEgg from "@/components/portfolio/common/ScrollEgg.astro";
 import DotDown from "@/components/portfolio/profile/DotDown.astro";
 import HeadingLine from "@/components/portfolio/profile/HeadingLine.astro";
 import HistoryItems from "@/components/portfolio/profile/HistoryItems.astro";
@@ -8,82 +9,139 @@ import SectionHeading from "@/components/portfolio/profile/SectionHeading.astro"
 import LayoutsPortfolio from "@/layouts/LayoutsPortfolio.astro";
 ---
 
-<LayoutsPortfolio title="プロフィール | Nami Takagi Portfolio" description="たかぎのプロフィールページです。制作への想いや好きなことなどについてまとめています。" breadcrumbs={[{text:"プロフィール", src:"/portfolio/profile"}]}>
+<LayoutsPortfolio
+  title="プロフィール | Nami Takagi Portfolio"
+  description="たかぎのプロフィールページです。制作への想いや好きなことなどについてまとめています。"
+  breadcrumbs={[{ text: "プロフィール", src: "/portfolio/profile" }]}
+>
   <main>
+    <ScrollEgg />
     <section class="px-6 lg:px-[108px]">
-        <div class="max-w-2lg mx-auto py-28 lg:py-40">
-          <PageHeading title="プロフィール" titleEn="Profile"/>
+      <div class="max-w-2lg mx-auto py-28 lg:py-40">
+        <PageHeading title="プロフィール" titleEn="Profile" />
 
         {/* プロフィール */}
-        <section class="flex flex-col gap-10 mt-10 lg:flex-row lg:items-end lg:gap-16 lg:mt-16">
+        <section
+          class="flex flex-col gap-10 mt-10 lg:flex-row lg:items-end lg:gap-16 lg:mt-16"
+        >
           <div class="flex-1 relative">
-            <span class="absolute z-[1] top-4 left-4 w-full h-full block border-4 border-orange-800 rounded-2xl"></span>
-            <span class="absolute z-0 top-4 left-4 w-full h-full block bg-yellow-10 rounded-2xl"></span>
-            <div class="relative w-full h-96 overflow-hidden rounded-2xl flex items-center">
-              <img class="object-cover min-h-full min-w-full" src="/image/portfolio/profile/profile-image.jpg" alt="たかぎの写真">
+            <span
+              class="absolute z-[1] top-4 left-4 w-full h-full block border-4 border-orange-800 rounded-2xl"
+            ></span>
+            <span
+              class="absolute z-0 top-4 left-4 w-full h-full block bg-yellow-10 rounded-2xl"
+            ></span>
+            <div
+              class="relative w-full h-96 overflow-hidden rounded-2xl flex items-center"
+            >
+              <img
+                class="object-cover min-h-full min-w-full"
+                src="/image/portfolio/profile/profile-image.jpg"
+                alt="たかぎの写真"
+              />
             </div>
           </div>
           <div class="relative flex-1">
-            <SectionHeading title="たかぎ なみ"/>
-            <p class="text-sm/[2]">秋田県の季節の花火が綺麗な街で生まれ育った、<br class="hidden lg:block">1995年5月生まれの28歳です。<br>
-            農業高校を卒業して、地方銀行に入行し、主に渉外担当として8年勤務しました。<br class="hidden lg:block">退職後は、制作会社でフロントエンドエンジニアとして働いています。<br>
-            趣味はライブに行くこと。主にヴィジュアル系が好きで、15年目になりました。<br>
-            小さい頃から両親に「ヘルメット」とあだ名をつけられるぐらい髪が厚く、<br class="hidden lg:block">重いので髪柱を綺麗に立てられるヘドバンに憧れています。<br>
-            好きな言葉は「自分らしく自分裏切れ」。
-          </p>
+            <SectionHeading title="たかぎ なみ" />
+            <p class="text-sm/[2]">
+              秋田県の季節の花火が綺麗な街で生まれ育った、<br
+                class="hidden lg:block"
+              />1995年5月生まれの28歳です。<br />
+              農業高校を卒業して、地方銀行に入行し、主に渉外担当として8年勤務しました。<br
+                class="hidden lg:block"
+              />退職後は、制作会社でフロントエンドエンジニアとして働いています。<br
+              />
+              趣味はライブに行くこと。主にヴィジュアル系が好きで、15年目になりました。<br
+              />
+              小さい頃から両親に「ヘルメット」とあだ名をつけられるぐらい髪が厚く、<br
+                class="hidden lg:block"
+              />重いので髪柱を綺麗に立てられるヘドバンに憧れています。<br />
+              好きな言葉は「自分らしく自分裏切れ」。
+            </p>
           </div>
         </section>
 
-        <DotDown/>
+        <DotDown />
 
         {/* メッセージ */}
-        <section class="lg:mx-auto lg:w-fit relative border-4 border-orange-800 rounded-2xl bg-yellow-10 pt-6 px-6 pb-10 lg:p-10 md:mr-32">
+        <section
+          class="lg:mx-auto lg:w-fit relative border-4 border-orange-800 rounded-2xl bg-yellow-10 pt-6 px-6 pb-10 lg:p-10 md:mr-32"
+        >
           <h2 class="text-xl/[1.6] font-medium">「誰かの役に立ちたい」</h2>
           <div class="my-[6px]">
-            <HeadingLine/>
+            <HeadingLine />
           </div>
           <div>
-            <p class="text-sm/[2]">小さい頃から何かを作ったりするのが好きでした。「誰かの役に立つ」ことが大好きです。<br>
-              地方銀行員として、沢山のお客さまの悩みに寄り添い培った、「ニーズに合わせた課題解決力」や、<br class="hidden lg:block">
-              少人数のチームでの制作経験も、今後の業務に活かすことができると思います。</p>
+            <p class="text-sm/[2]">
+              小さい頃から何かを作ったりするのが好きでした。「誰かの役に立つ」ことが大好きです。<br
+              />
+              地方銀行員として、沢山のお客さまの悩みに寄り添い培った、「ニーズに合わせた課題解決力」や、<br
+                class="hidden lg:block"
+              />
+              少人数のチームでの制作経験も、今後の業務に活かすことができると思います。
+            </p>
           </div>
-          <img class="absolute z-[-1] right-0 bottom-0 translate-x-36 hidden md:block" src="/image/portfolio/common/botton-kokke.svg" alt="">
-          <img class="absolute z-[1] right-0 top-0 -translate-y-[7.3rem] w-32 md:hidden" src="/image/portfolio/common/message-kokke.svg" alt="">
+          <img
+            class="absolute z-[-1] right-0 bottom-0 translate-x-36 hidden md:block"
+            src="/image/portfolio/common/botton-kokke.svg"
+            alt=""
+          />
+          <img
+            class="absolute z-[1] right-0 top-0 -translate-y-[7.3rem] w-32 md:hidden"
+            src="/image/portfolio/common/message-kokke.svg"
+            alt=""
+          />
         </section>
 
-        <DotDown/>
+        <DotDown />
 
         {/* 好きなこと */}
         <section class="mx-auto max-w-[808px]">
-          <SectionHeading title="好きなこと"/>
-          <LikeItemList/>
+          <SectionHeading title="好きなこと" />
+          <LikeItemList />
         </section>
 
-        <DotDown/>
+        <DotDown />
 
         {/* 歴史 */}
         <section class="mx-auto max-w-[808px]">
-          <SectionHeading title="たかぎの今まで"/>
-          <HistoryItems/>
+          <SectionHeading title="たかぎの今まで" />
+          <HistoryItems />
         </section>
 
-        <DotDown/>
+        <DotDown />
 
         {/* こっけの紹介 */}
         <section class="mx-auto max-w-[808px]">
-          <SectionHeading title="TKG公式キャラクター"/>
+          <SectionHeading title="TKG公式キャラクター" />
           <div class="mt-10 flex flex-col gap-10 items-center md:flex-row">
-            <img class="w-3/4 md:w-1/2 max-w-[250px]" src="/image/portfolio/profile/profile-kokke-info.png" alt="TKG（卵かけご飯）を持ったニワトリのキャラクター">
+            <img
+              class="w-3/4 md:w-1/2 max-w-[250px]"
+              src="/image/portfolio/profile/profile-kokke-info.png"
+              alt="TKG（卵かけご飯）を持ったニワトリのキャラクター"
+            />
             <div class="flex flex-col gap-4">
               <h3 class="flex gap-1 items-center">
-                <span class="text-lg/[2] font-medium lg:text-2xl/[1.6]">こっけ</span>
-                <img class="w-6 translate-y-[3px]" src="/image/portfolio/common/egg.svg" alt=""></h3>
-              <p class="text-sm/[2]">頭の上の卵がトレードマーク。<br/>人懐っこく、誰とでも友達になれる性格。<br/>卵かけご飯をこよなく愛し、「卵かけご飯」のアレンジレシピを広めている。<br>おすすめは「醤油 + ジャバンのり（韓国のりふりかけ）+ ドン○のごまにんにく」</p>
+                <span class="text-lg/[2] font-medium lg:text-2xl/[1.6]"
+                  >こっけ</span
+                >
+                <img
+                  class="w-6 translate-y-[3px]"
+                  src="/image/portfolio/common/egg.svg"
+                  alt=""
+                />
+              </h3>
+              <p class="text-sm/[2]">
+                頭の上の卵がトレードマーク。<br
+                />人懐っこく、誰とでも友達になれる性格。<br
+                />卵かけご飯をこよなく愛し、「卵かけご飯」のアレンジレシピを広めている。<br
+                />おすすめは「醤油 + ジャバンのり（韓国のりふりかけ）+
+                ドン○のごまにんにく」
+              </p>
             </div>
           </div>
         </section>
-
       </div>
-      </section>
+    </section>
   </main>
 </LayoutsPortfolio>

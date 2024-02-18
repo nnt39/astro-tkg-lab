@@ -2,10 +2,12 @@
 import LayoutsPortfolio from "@/layouts/LayoutsPortfolio.astro";
 import GallreyItem from "@/components/portfolio/gallery/GalleryItem.astro";
 import PageHeading from "@/components/portfolio/common/PageHeading.astro";
+import ScrollEgg from "@/components/portfolio/common/ScrollEgg.astro";
 ---
 
 <LayoutsPortfolio title="つくったもの | Nami Takagi Portfolio" description="実績ページです。過去に制作したものについてまとめました。" breadcrumbs={[{text:"つくったもの", src:"/portfolio/gallery"}]}>
   <main>
+    <ScrollEgg/>
     <section class="px-6 lg:px-[108px]">
         <div class="max-w-2lg mx-auto py-28 lg:py-40">
           <PageHeading title="制作物・実績" titleEn="Gallery"/>
