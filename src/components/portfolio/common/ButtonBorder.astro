@@ -6,9 +6,47 @@ interface Props {
 
 const { href, text } = Astro.props;
 ---
+
 <div class="relative w-fit mx-auto group">
-    <a class="relative z-[1] block" href={href}>
-        <span class="inline-block w-full border-[2px] border-brown rounded-full text-brown bg-yellow-10 text-base/[2] font-medium px-6 py-2 transition duration-200 ease-in-out hover:bg-brown hover:text-white lg:text-lg/[2]">{text}</span>
-    </a>
-    <img class="absolute top-[1px] right-0 w-14 translate-x-1 transition-transform duration-400 ease-in-out group-hover:translate-x-8" src="/image/portfolio/common/botton-kokke.svg" width="240" height="240" alt="">
+  <a class="relative z-[1] block" href={href}>
+    <span
+      class="inline-block w-full border-[2px] border-brown rounded-full text-brown bg-yellow-10 text-base/[2] font-medium px-6 py-2 transition duration-200 ease-in-out hover:bg-brown hover:text-white lg:text-lg/[2]"
+      >{text}</span
+    >
+  </a>
+  <img
+    class="js-btn-image absolute top-[1px] right-0 w-14 translate-x-1 transition-transform duration-200 ease-in-out group-hover:translate-x-8"
+    src="/image/portfolio/common/botton-kokke.svg"
+    width="240"
+    height="240"
+    alt=""
+  />
 </div>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  gsap.registerPlugin(ScrollTrigger);
+
+  window.addEventListener("resize", () => {
+    const btnImage = document.querySelectorAll(".js-btn-image");
+    if (window.innerWidth < 768) {
+      btnImage.forEach(image => {
+        gsap.fromTo(
+          image,
+          { x: 0 },
+          {
+            x: 38,
+            ease: "none",
+            scrollTrigger: {
+              trigger: image,
+              start: "center center+=100",
+              end: "center center+=100",
+              scrub: true,
+            },
+          }
+        );
+      });
+    }
+  });
+</script>

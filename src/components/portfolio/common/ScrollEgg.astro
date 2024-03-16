@@ -20,7 +20,6 @@
   const bodyHeight = document.body.scrollHeight;
   const tl = gsap.timeline();
 
-  // タイムラインにアニメーションを追加
   tl.to(".js-scroll", { rotation: 0 }).to(".js-scroll", { autoAlpha: 1 });
   gsap.to(".js-scroll", {
     rotation: "+=3650",
