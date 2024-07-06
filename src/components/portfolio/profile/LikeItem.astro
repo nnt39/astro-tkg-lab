@@ -22,15 +22,15 @@ const {
 
 <div
   class:list={[
-    "flex flex-col gap-6 md:items-center md:gap-20",
-    flexDirectionReverse ? "md:flex-row-reverse" : "md:flex-row",
+    "flex flex-col gap-6 sm:items-center justify-center md:gap-20",
+    flexDirectionReverse ? "sm:flex-row-reverse" : "sm:flex-row",
   ]}
 >
   {/* 大きいチェキ */}
-  <div class="relative flex-1">
+  <div class="relative">
     <div
       class:list={[
-        "relative z-[2] px-3 pt-3 pb-12 border-[4px] border-brown rounded w-fit mx-auto bg-white",
+        "relative z-[2] mx-auto px-3 pt-3 pb-12 border-[4px] border-brown rounded w-fit bg-white",
         rotate,
       ]}
     >
@@ -69,7 +69,7 @@ const {
     </div>
   </div>
   {/* 本文 */}
-  <div class="flex-1">
+  <div class="sm:w-1/2">
     <h3 class="text-lg/[2] font-medium md:text-2xl/[2]">{title}</h3>
     <p class="text-justify text-sm/[2] lg:text-base/[2]" set:html={text} />
   </div>

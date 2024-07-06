@@ -4,34 +4,34 @@ const likeItemData = [
 {
     title: "ライブ",
     text: "主にソロで<a href='/portfolio/profile/live' class='transition-colors duration-300 hover:text-orange-800'>ライブ</a>参戦しています。最近はユナイトというバンド中心に遠征。ヴィジュアル系が好きです。他にもONE OK ROCK、感覚ピエロや地元のフェスなども参戦します。",
-    src: "/image/portfolio/profile/profile-like-01.jpg",
+    src: "/image/portfolio/profile/like/like-live01.jpg",
     textImage: "/image/portfolio/profile/profile-text-01.svg",
     flexDirectionReverse: false,
   },
   {
     title: "ゲーム",
     text: "FFシリーズが好きです。今の楽しみはFF7 REVERSE。最近、龍が如くも始めました。本編を進めるよりもサブストーリーなどを進めるのが好きです。もちろん本編も楽しみます！",
-    src: "/image/portfolio/profile/profile-like-04.jpg",
+    src: "/image/portfolio/profile/like/like-game01.jpg",
     textImage: "/image/portfolio/profile/profile-text-04.svg",
     flexDirectionReverse: true,
   },
   {
     title: "旅行",
     text: "プライベートでは、家族旅行・ソロ活どちらも楽しんでいます。お気に入りは「函館」。フェリーでゆったり旅がお気に入りです。",
-    src: "/image/portfolio/profile/profile-like-03.jpg",
+    src: "/image/portfolio/profile/like/like-travel01.jpg",
     textImage: "/image/portfolio/profile/profile-text-03.svg",
     flexDirectionReverse: false,
   },
   {
     title: "お酒",
     text: "レモンサワーが好きです。お気に入りは、レモンのプロが開発した<a href='https://www.sapporobeer.jp/shin-lemon_sour/' target='_blank' class='transition-colors duration-300 hover:text-orange-800'>ニッポンのシンレモンサワー</a>🍋時々ワインも嗜みます🍷",
-    src: "/image/portfolio/profile/profile-like-02.jpg",
+    src: "/image/portfolio/profile/like/like-lemon01.jpg",
     textImage: "/image/portfolio/profile/profile-text-02.svg",
     flexDirectionReverse: true,
   },
 ]
 ---
-<ul class="pt-10 flex flex-col gap-20 lg:px-20 lg:gap-28">
+<ul class="pt-10 flex flex-col gap-20 sm:gap-8 lg:px-20 lg:gap-28">
   {likeItemData.map(item => (
       <li>
           <LikeItem 
