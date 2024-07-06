@@ -7,6 +7,7 @@ import HistoryItems from "@/components/portfolio/profile/HistoryItems.astro";
 import LikeItemList from "@/components/portfolio/profile/LikeItemList.astro";
 import SectionHeading from "@/components/portfolio/profile/SectionHeading.astro";
 import LayoutsPortfolio from "@/layouts/LayoutsPortfolio.astro";
+import Message from "@/components/portfolio/profile/Message.astro";
 ---
 
 <LayoutsPortfolio
@@ -50,10 +51,16 @@ import LayoutsPortfolio from "@/layouts/LayoutsPortfolio.astro";
                 />1995年5月生まれの28歳です。
               </span>
               <span class="block">
-                農業高校を卒業後、地方銀行に入行、主に渉外担当として8年勤務。<br class="md:block">退職後は、制作会社でフロントエンドエンジニアとして働いています。
+                農業高校を卒業後、地方銀行に入行、主に渉外担当として8年勤務。<br
+                  class="md:block"
+                />退職後は、制作会社でフロントエンドエンジニアとして働いています。
               </span>
               <span class="block">
-                趣味はライブに行くこと。ヴィジュアル系が好きです。<br class="md:block">小さい頃から両親に「ヘルメット」とあだ名をつけられるぐらい髪が厚く、<br class="md:block lg:hidden">重いので髪柱を綺麗に立てられるヘドバンに憧れています。
+                趣味はライブに行くこと。ヴィジュアル系が好きです。<br
+                  class="md:block"
+                />小さい頃から両親に「ヘルメット」とあだ名をつけられるぐらい髪が厚く、<br
+                  class="md:block lg:hidden"
+                />重いので髪柱を綺麗に立てられるヘドバンに憧れています。
               </span>
               <span class="block">
                 好きな言葉は「自分らしく自分裏切れ」。大好きな曲の歌詞の一節です。
@@ -65,34 +72,7 @@ import LayoutsPortfolio from "@/layouts/LayoutsPortfolio.astro";
         <DotDown />
 
         {/* メッセージ */}
-        <section
-          class="lg:mx-auto lg:w-fit relative border-4 border-orange-800 rounded-2xl bg-yellow-10 pt-6 px-6 pb-10 lg:p-10 md:mr-32"
-        >
-          <h2 class="text-xl/[1.6] font-medium">「誰かの役に立ちたい」</h2>
-          <div class="my-[6px]">
-            <HeadingLine />
-          </div>
-          <div>
-            <p class="text-sm/[2]">
-              小さい頃から何かを作ったりするのが好きでした。「誰かの役に立つ」ことが大好きです。<br
-              />
-              地方銀行員として、沢山のお客さまの悩みに寄り添い培った、「ニーズに合わせた課題解決力」や、<br
-                class="hidden lg:block"
-              />
-              少人数のチームでの制作経験も、今後の業務に活かすことができると思います。
-            </p>
-          </div>
-          <img
-            class="absolute z-[-1] right-0 bottom-0 translate-x-36 hidden md:block"
-            src="/image/portfolio/common/botton-kokke.svg"
-            alt=""
-          />
-          <img
-            class="absolute z-[1] right-0 top-0 -translate-y-[7.3rem] w-32 md:hidden"
-            src="/image/portfolio/common/message-kokke.svg"
-            alt=""
-          />
-        </section>
+        <Message />
 
         <DotDown />
 
