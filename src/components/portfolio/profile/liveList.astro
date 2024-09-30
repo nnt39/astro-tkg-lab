@@ -1,31 +1,34 @@
 ---
 import { getLives } from "@/lib/microcms.ts";
 const response = await getLives({
-  fields: ["publishedAt", "id", "date", "title", "artist", "venue"],
-}); // APIを追加する場合は追加
+  fields: ["live"],
+});
+const contents = response.contents;
 import { cdate } from "cdate";
 ---
 
 {/* 日付フォーマット：https://www.npmjs.com/package/cdate?activeTab=readme */}
 {
-  response.contents.map((content: any) => (
-    <div class="py-4">
-      <span class="w-10 h-[1px] block bg-gradient-to-r rounded-full from-orange-800 from-60% via-transparent via-60% to-transparent to-60% bg-[length:10px_1px]" />
-        <p class="text-xs/[1.6] lg:text-sm/[1.6]">
-          <time
-            class="text-orange-800 font-en font-light"
-            datetime={cdate(content.publishedAt).format("YYYY-MM-DD")}
-          >
-            {cdate(content.publishedAt).tz("Asia/Tokyo").format("YYYY-MM-DD")}
-          </time>
-          <span class="ml-2 text-gray-900 lg:ml-4">{content.venue}</span>
-        </p>
-        <h2 class="text-gray-900 text-base/[1.6] lg:text-lg/[1.6]">
-          {content.title}
-        </h2>
-        <p class="text-gray-500 text-xs/[1.6] lg:text-sm/[1.6]">
-          {content.artist}
-        </p>
-      </div>
-  ))
+  contents[0].live.map((content: any) => (
+   <div class="py-4" key={content.title}>
+     <span class="w-10 h-[1px] block bg-gradient-to-r rounded-full from-orange-800 from-60% via-transparent via-60% to-transparent to-60% bg-[length:10px_1px]" />
+     <p class="text-xs/[1.6] lg:text-sm/[1.6]">
+       <time
+         class="text-orange-800 font-en font-light"
+         datetime={cdate(content.date).format("YYYY-MM-DD")}
+       >
+         {cdate(content.date).tz("Asia/Tokyo").format("YYYY-MM-DD")}
+       </time>
+       <span class="ml-2 text-gray-900 lg:ml-4">{content.venue}</span>
+     </p>
+     <h2 class="text-gray-900 text-base/[1.6] lg:text-lg/[1.6]">
+       {content.title}
+     </h2>
+     <p class="text-gray-500 text-xs/[1.6] lg:text-sm/[1.6]">
+       {content.artist}
+     </p>
+   </div>
+ ))
 }
+
+

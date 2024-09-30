@@ -43,16 +43,14 @@ export const getBlogDetail = async (
 
 //Live
 export type Live = {
-  id: string;
-  createdAt: string;
-  updatedAt: string;
-  publishedAt: string;
-  revisedAt: string;
-  title: string;
+  live: any;
+  title: string; 
   artist: string;
-  venue: string;
   date: string;
+  venue: string;
 };
+
+// ライブイベントのレスポンスデータ型
 export type LiveResponse = {
   totalCount: number;
   offset: number;
@@ -60,12 +58,12 @@ export type LiveResponse = {
   contents: Live[];
 };
 
-//APIの呼び出し
+
 // APIの呼び出し
 export const getLives = async (queries?: MicroCMSQueries) => {
   const defaultQueries = { ...queries, limit: 100 }; // Set the default limit to 100
   return await client.get<LiveResponse>({
-    endpoint: "live",
+    endpoint: "lives",
     queries: defaultQueries,
   });
 };
@@ -74,7 +72,7 @@ export const getLiveDetail = async (
   queries?: MicroCMSQueries
 ) => {
   return await client.getListDetail<Live>({
-    endpoint: "live",
+    endpoint: "lives",
     contentId,
     queries,
   });
